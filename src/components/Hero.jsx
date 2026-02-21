@@ -1,14 +1,37 @@
+"use client";
+import { useState, useEffect } from "react";
+
 export default function Hero() {
+    const images = [
+        "/micro1.jpg",
+        "/micro2.jpg",
+        "/micro3.jpg"
+    ];
+
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+        }, 5000);
+
+        return () => clearInterval(interval);
+    }, [images.length]);
+
     return (
-        <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
-            {/* Background Image with Overlay */}
+        <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-[#0F2016]">
+            {/* Background Image Carousel with Overlay */}
             <div className="absolute inset-0 z-0">
-                <img
-                    src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?q=80&w=2070&auto=format&fit=crop"
-                    alt="Greenhouse Plants"
-                    className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-[#0F2016]/80 backdrop-brightness-75 mix-blend-multiply"></div>
+                {images.map((img, index) => (
+                    <img
+                        key={index}
+                        src={img}
+                        alt={`Slide ${index + 1}`}
+                        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${index === currentImageIndex ? "opacity-100" : "opacity-0"
+                            }`}
+                    />
+                ))}
+                <div className="absolute inset-0 bg-[#0F2016]/70 backdrop-brightness-75 mix-blend-multiply"></div>
             </div>
 
             {/* Content */}
