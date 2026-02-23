@@ -3,7 +3,7 @@ import { Facebook, Instagram, Twitter, Leaf, MapPin, Phone, Mail } from "lucide-
 
 export default function Footer() {
     return (
-        <footer id="contact" className="bg-grad-footer text-white pt-[100px] px-[8%] pb-[40px] border-t-[4px] border-transparent relative z-20" style={{ borderImage: "var(--grad-pure-green) 1" }}>
+        <footer className="bg-grad-footer text-white pt-[100px] px-[8%] pb-[40px] border-t-[4px] border-transparent relative z-20" style={{ borderImage: "var(--grad-pure-green) 1" }}>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1.5fr] gap-[80px] mb-[80px]">
                 <div className="footer-brand">
                     <Link href="/" className="text-[1.6rem] font-[800] text-white flex items-center gap-[12px] no-underline mb-[25px]">
@@ -23,10 +23,10 @@ export default function Footer() {
                 <div className="footer-links">
                     <h4 className="text-[1.2rem] mb-[30px] text-[var(--color-secondary)] font-[var(--font-serif)] font-[800]">Explore</h4>
                     <ul className="list-none space-y-[15px]">
-                        <li><Link href="#home" className="text-white/70 no-underline transition-colors hover:text-white">Home</Link></li>
-                        <li><Link href="#about" className="text-white/70 no-underline transition-colors hover:text-white">Philosophy</Link></li>
-                        <li><Link href="#supply" className="text-white/70 no-underline transition-colors hover:text-white">Distribution</Link></li>
-                        <li><Link href="#gallery" className="text-white/70 no-underline transition-colors hover:text-white">Collection</Link></li>
+                        <li><Link href="/#home" className="text-white/70 no-underline transition-colors hover:text-white">Home</Link></li>
+                        <li><Link href="/#about" className="text-white/70 no-underline transition-colors hover:text-white">About</Link></li>
+                        <li><Link href="/#products" className="text-white/70 no-underline transition-colors hover:text-white">Product</Link></li>
+                        <li><Link href="/contact" className="text-white/70 no-underline transition-colors hover:text-white">Contact</Link></li>
                     </ul>
                 </div>
 

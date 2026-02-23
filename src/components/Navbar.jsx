@@ -1,15 +1,18 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { PhoneCall, Leaf, Menu, X } from "lucide-react";
 
-export default function Navbar({ solid = false }) {
+export default function Navbar() {
+    const pathname = usePathname();
+    const isHome = pathname === "/";
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50);
+            setIsScrolled(window.scrollY > 100);
         };
         window.addEventListener("scroll", handleScroll, { passive: true });
         return () => window.removeEventListener("scroll", handleScroll);
@@ -27,27 +30,27 @@ export default function Navbar({ solid = false }) {
         return () => window.removeEventListener("scroll", handleScrollProgress);
     }, []);
 
-    const showSolid = isScrolled || solid;
+    const showAlways = !isHome;
+    const isVisible = isScrolled || showAlways;
 
     return (
         <>
             {/* Scroll Progress */}
             <div
-                className="fixed top-0 left-0 h-[6px] bg-grad-pure z-[2000]"
+                className="fixed top-0 left-0 h-[6px] bg-grad-pure z-[1001]"
                 style={{ width: `${scrollProgress}%` }}
             ></div>
 
             <header
-                className={`fixed top-0 left-0 right-0 px-[5%] md:px-[8%] flex justify-between items-center z-[1000] border-b-4 border-transparent transition-all duration-400 ease-[cubic-bezier(0.165,0.84,0.44,1)] ${showSolid
-                    ? "py-[10px] bg-[#081c15] shadow-strong"
-                    : "py-[15px] bg-grad-nav shadow-strong"
+                className={`fixed left-1/2 -translate-x-1/2 z-[1000] flex justify-between items-center transition-all duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] ${isScrolled
+                    ? "top-5 w-[92%] md:w-[85%] px-[5%] py-[12px] bg-[#081c15]/95 backdrop-blur-xl rounded-[40px] border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+                    : "top-0 w-full px-[5%] md:px-[8%] py-[20px] bg-transparent rounded-none border-none"
                     }`}
-                style={{ borderImage: "var(--grad-pure-green) 1" }}
             >
                 {/* Logo */}
-                <Link href="/" className="text-[1.6rem] font-extrabold text-white flex items-center gap-3 no-underline tracking-tighter">
-                    <img src="/logo.png" alt="Microgreens Lanka Logo" className="h-10 w-auto object-contain brightness-0 invert" />
-                    <span>Microgreens Lanka</span>
+                <Link href="/" className="text-[1.4rem] md:text-[1.6rem] font-bold flex items-center gap-3 no-underline">
+                    <img src="/logogreen.png" alt="Microgreens Lanka Logo" className="h-10 md:h-12 w-auto object-contain" />
+                    <span className="text-grad-pure hidden sm:block tracking-tighter">Microgreens Lanka</span>
                 </Link>
 
                 {/* Mobile Toggle */}
@@ -71,13 +74,10 @@ export default function Navbar({ solid = false }) {
                             <Link href="/#home" className="text-white font-semibold text-[1.5rem] md:text-[1rem] transition-all relative py-1 hover:text-[var(--color-primary-vibrant)] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[var(--color-primary-vibrant)] after:transition-all hover:after:w-full">Home</Link>
                         </li>
                         <li>
-                            <Link href="/#about" className="text-white font-semibold text-[1.5rem] md:text-[1rem] transition-all relative py-1 hover:text-[var(--color-primary-vibrant)] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[var(--color-primary-vibrant)] after:transition-all hover:after:w-full">Story</Link>
+                            <Link href="/about" className="text-white font-semibold text-[1.5rem] md:text-[1rem] transition-all relative py-1 hover:text-[var(--color-primary-vibrant)] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[var(--color-primary-vibrant)] after:transition-all hover:after:w-full">About Us</Link>
                         </li>
                         <li>
-                            <Link href="/#supply" className="text-white font-semibold text-[1.5rem] md:text-[1rem] transition-all relative py-1 hover:text-[var(--color-primary-vibrant)] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[var(--color-primary-vibrant)] after:transition-all hover:after:w-full">Suppliers</Link>
-                        </li>
-                        <li>
-                            <Link href="/#gallery" className="text-white font-semibold text-[1.5rem] md:text-[1rem] transition-all relative py-1 hover:text-[var(--color-primary-vibrant)] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[var(--color-primary-vibrant)] after:transition-all hover:after:w-full">Gallery</Link>
+                            <Link href="/products" className="text-white font-semibold text-[1.5rem] md:text-[1rem] transition-all relative py-1 hover:text-[var(--color-primary-vibrant)] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[var(--color-primary-vibrant)] after:transition-all hover:after:w-full">Product</Link>
                         </li>
                         <li>
                             <Link href="/contact" className="text-white font-semibold text-[1.5rem] md:text-[1rem] transition-all relative py-1 hover:text-[var(--color-primary-vibrant)] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[var(--color-primary-vibrant)] after:transition-all hover:after:w-full">Contact</Link>
