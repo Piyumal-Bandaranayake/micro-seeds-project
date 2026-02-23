@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import { Leaf, HeartPulse, ShoppingCart, Sparkles, ChevronRight } from "lucide-react";
 
 export default function Explanation() {
@@ -75,9 +76,9 @@ export default function Explanation() {
                         ))}
                     </div>
 
-                    <button className="flex items-center gap-2 text-[var(--color-primary)] font-black uppercase tracking-widest text-[0.9rem] hover:text-[var(--color-primary-vibrant)] transition-colors pt-4 group">
-                        Explore Our Full Collection <ChevronRight size={20} className="transition-transform group-hover:translate-x-2" />
-                    </button>
+                    <Link href="#products" className="inline-flex items-center justify-center gap-[12px] px-[40px] py-[18px] rounded-full font-black uppercase tracking-[2px] text-[0.95rem] transition-all duration-500 bg-grad-pure text-white border-none shadow-[0_20px_40px_rgba(27,67,50,0.3)] hover:-translate-y-[8px] hover:shadow-[0_25px_50px_rgba(68,221,102,0.4)] group w-max mt-6">
+                        Explore Product <ChevronRight size={20} className="transition-transform group-hover:translate-x-2" />
+                    </Link>
                 </div>
 
                 {/* Right Side: Slideshow */}
