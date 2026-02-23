@@ -83,24 +83,6 @@ export default function Benefits() {
                     })}
                 </div>
 
-                {/* Additional floating UI mimicking the accordion list on the right */}
-                <div className="hidden lg:block absolute bottom-24 -right-4 w-72 bg-transparent p-4 z-20 text-sm">
-                    <div className="flex justify-between items-center mb-6 text-gray-400 border-b border-white/10 pb-4 cursor-pointer hover:text-white transition-colors">
-                        <span className="font-medium tracking-wide">Description</span>
-                        <span className="text-xl leading-none">+</span>
-                    </div>
-                    <div className="flex justify-between items-center mb-6 text-gray-400 border-b border-white/10 pb-4 cursor-pointer hover:text-white transition-colors">
-                        <span className="font-medium tracking-wide">Nutrition</span>
-                        <span className="text-xl leading-none">+</span>
-                    </div>
-                    <div className="text-white font-medium flex justify-between items-center mb-4 cursor-pointer">
-                        <span className="tracking-wide">Ingredients</span>
-                        <span className="text-xl leading-none">-</span>
-                    </div>
-                    <p className="text-xs text-gray-400 leading-relaxed font-light">
-                        Fresh, tangy and zesty organic microgreens with refreshing earthy notes ready to elevate your meals.
-                    </p>
-                </div>
 
             </div>
 
