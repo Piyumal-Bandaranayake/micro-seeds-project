@@ -6,19 +6,15 @@ export default function EdibleFlowersPage() {
     const data = storeCategories.find(c => c.id === "edible-flowers");
 
     return (
-        <main className="min-h-screen bg-[#F5F8F6] relative">
-            <Navbar solid={true} />
-
+        <main className="min-h-screen bg-[var(--color-light)] relative">
+            
             {/* Header Section */}
-            <section className="relative pt-40 pb-20 px-8 bg-[#0F2016] text-white overflow-hidden">
-                <Leaf className="absolute top-10 right-10 text-[#4ade80] opacity-10 w-96 h-96 rotate-45 z-0 pointer-events-none" strokeWidth={1} />
-                <div className="max-w-7xl mx-auto relative z-10 text-center">
-                    <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 text-[#E4B552]">
+            <section className="relative pt-[180px] pb-[80px] px-[8%] bg-grad-nav text-white overflow-hidden border-b-[4px] border-transparent" style={{ borderImage: "var(--grad-pure-green) 1" }}>
+                <Leaf className="absolute top-10 right-10 text-[var(--color-primary-vibrant)] opacity-10 w-96 h-96 rotate-45 z-0 pointer-events-none" strokeWidth={1} />
+                <div className="max-w-[1400px] mx-auto relative z-10 text-center">
+                    <h1 className="text-[4rem] md:text-[5rem] font-[var(--font-serif)] font-[800] text-[var(--color-secondary)]">
                         {data.name}
                     </h1>
-                    <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                        {data.description}
-                    </p>
                 </div>
             </section>
 

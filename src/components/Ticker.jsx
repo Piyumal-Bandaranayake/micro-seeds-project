@@ -6,6 +6,7 @@ export default function Ticker() {
     const items = [
         { title: "#1 Dealer", subtitle: "Island-wide Supply", icon: <Award className="w-[3rem] h-[3rem] text-[#44dd66] mb-[5px] drop-shadow-[0_2px_5px_rgba(68,221,102,0.2)]" strokeWidth={1.5} /> },
         { title: "State Registered", subtitle: "Govt. Recognized", icon: <Landmark className="w-[3rem] h-[3rem] text-[#44dd66] mb-[5px] drop-shadow-[0_2px_5px_rgba(68,221,102,0.2)]" strokeWidth={1.5} /> },
+        { title: "GAP • GMP • ISO", subtitle: "International Certifications", icon: <ShieldCheck className="w-[3rem] h-[3rem] text-[#44dd66] mb-[5px] drop-shadow-[0_2px_5px_rgba(68,221,102,0.2)]" strokeWidth={1.5} /> },
         { title: "Bulk Supplier", subtitle: "Retail & Wholesale", icon: <Truck className="w-[3rem] h-[3rem] text-[#44dd66] mb-[5px] drop-shadow-[0_2px_5px_rgba(68,221,102,0.2)]" strokeWidth={1.5} /> },
         { title: "Premium Quality", subtitle: "Lab Certified", icon: <ShieldCheck className="w-[3rem] h-[3rem] text-[#44dd66] mb-[5px] drop-shadow-[0_2px_5px_rgba(68,221,102,0.2)]" strokeWidth={1.5} /> },
     ];
@@ -19,7 +20,7 @@ export default function Ticker() {
                 {marqueeItems.map((item, index) => (
                     <div
                         key={index}
-                        className="min-w-[300px] bg-white text-[var(--color-primary)] px-[30px] py-[40px] text-center transition-all duration-400 ease-[cubic-bezier(0.165,0.84,0.44,1)] rounded-[30px] border-[3px] border-transparent shadow-[0_15px_35px_rgba(27,67,50,0.1)] flex flex-col items-center gap-[15px] hover:-translate-y-[10px] hover:scale-105 hover:shadow-[0_20px_45px_rgba(27,67,50,0.2)]"
+                        className="min-w-[300px] bg-white text-[var(--color-primary)] px-[30px] py-[40px] text-center transition-all duration-400 ease-[cubic-bezier(0.165,0.84,0.44,1)] rounded-[30px] border-[4px] border-[var(--color-primary-vibrant)]/40 shadow-[0_15px_35px_rgba(27,67,50,0.1)] flex flex-col items-center gap-[15px] hover:-translate-y-[10px] hover:scale-105 hover:shadow-[0_20px_45px_rgba(27,67,50,0.2)]"
                         style={{
                             backgroundImage: "linear-gradient(white, white), var(--grad-pure-green)",
                             backgroundOrigin: "border-box",

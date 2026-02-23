@@ -5,7 +5,7 @@ import { Leaf } from "lucide-react";
 
 export default function Product() {
     return (
-        <section className="py-[120px] px-[8%] bg-gradient-to-br from-[#1b4332] to-[#081c15] text-white relative overflow-hidden" id="gallery">
+        <section className="py-[120px] px-[8%] bg-gradient-to-br from-[#1b4332] to-[#081c15] text-white relative overflow-hidden" id="products">
             <span className="text-[var(--color-primary-light)] font-[800] text-[0.9rem] uppercase tracking-[3px] block mb-[15px] text-center relative z-10">
                 Our Collection
             </span>

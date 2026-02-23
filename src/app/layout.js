@@ -1,5 +1,6 @@
 import { Outfit, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const outfit = Outfit({
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${outfit.variable} ${playfair.variable} antialiased`}
       >
+        <Navbar />
         {children}
         <Footer />
       </body>

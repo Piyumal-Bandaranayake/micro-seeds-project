@@ -5,19 +5,22 @@ import Link from "next/link";
 
 export default function ProductsPage() {
     return (
-        <main className="min-h-screen bg-[#F5F8F6] pt-24 pb-24 relative overflow-hidden">
-            <Navbar solid />
-            <Leaf className="absolute top-40 left-[-2%] text-[#4ade80] opacity-10 w-56 h-56 rotate-12 z-0 pointer-events-none" strokeWidth={1} />
-            <Leaf className="absolute bottom-20 right-[5%] text-[#4ade80] opacity-10 w-48 h-48 -rotate-45 z-0 pointer-events-none" strokeWidth={1.5} />
-
-            <div className="max-w-7xl mx-auto px-4 relative z-10 pt-10">
-                <div className="text-center mb-16">
-                    <span className="text-sm font-bold text-[#E4B552] uppercase tracking-widest block mb-4">Our Store</span>
-                    <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#0F2016] mb-6">
-                        Explore Our Collections
-                    </h2>
-                    <div className="w-16 h-1 bg-[#2A8742] rounded-full mx-auto"></div>
+        <main className="min-h-screen bg-[var(--color-light)] relative">
+            
+            {/* Header Section */}
+            <section className="relative pt-[180px] pb-[80px] px-[8%] bg-grad-nav text-white overflow-hidden border-b-[4px] border-transparent" style={{ borderImage: "var(--grad-pure-green) 1" }}>
+                <Leaf className="absolute top-10 right-10 text-[var(--color-primary-vibrant)] opacity-10 w-96 h-96 rotate-45 z-0 pointer-events-none" strokeWidth={1} />
+                <div className="max-w-[1400px] mx-auto relative z-10 text-center">
+                    <h1 className="text-[4rem] md:text-[5rem] font-[var(--font-serif)] font-[800] mb-[20px] text-[var(--color-secondary)]">
+                        Our Collections
+                    </h1>
+                    <p className="text-[1.2rem] text-white/80 max-w-[800px] mx-auto leading-[1.7] font-[var(--font-sans)]">
+                        Discover our range of premium, organic microgreens grown with care. From nutrient-dense spicy varieties to mild, fresh greens, find the perfect addition to your wellness journey.
+                    </p>
                 </div>
+            </section>
+
+            <div className="max-w-7xl mx-auto px-4 relative z-10 py-24">
 
                 <div className="grid grid-cols-1 md:grid-cols-2 max-w-5xl mx-auto gap-12 md:gap-16">
                     {storeCategories.map((category) => (
