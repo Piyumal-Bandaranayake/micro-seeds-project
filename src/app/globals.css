@@ -20,7 +20,7 @@
 
 @layer base {
   :root {
-    --grad-pure-green: linear-gradient(135deg, #1b4332 0%, #44dd66 100%);
+    --grad-pure-green: linear-gradient(135deg, #2d6a4f 0%, #44dd66 100%);
     --grad-light-green: linear-gradient(135deg, #a5d6a7 0%, #81c784 100%);
     --grad-call-now: linear-gradient(135deg, #ffcc00 0%, #ff8800 100%);
     --grad-nav: linear-gradient(135deg, #081c15 0%, #2d6a4f 100%);

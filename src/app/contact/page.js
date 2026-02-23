@@ -1,11 +1,9 @@
-import Navbar from "@/components/Navbar";
 import Contact from "@/components/Contact";
 import { Leaf } from "lucide-react";
 
 export default function ContactPage() {
     return (
         <main className="min-h-screen bg-[var(--color-light)] relative">
-            <Navbar solid={true} />
 
             {/* Header Section */}
             <section className="relative pt-[180px] pb-[80px] px-[8%] bg-grad-nav text-white overflow-hidden border-b-[4px] border-transparent" style={{ borderImage: "var(--grad-pure-green) 1" }}>
