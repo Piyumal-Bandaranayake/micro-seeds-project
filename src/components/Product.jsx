@@ -1,61 +1,87 @@
-import { productsData } from "@/data/products";
-import { Star, Leaf } from "lucide-react";
+"use client";
+import { storeCategories } from "@/data/storeData";
 import Link from "next/link";
+import { Leaf } from "lucide-react";
 
 export default function Product() {
     return (
-        <section className="py-24 bg-transparent relative overflow-hidden" id="product">
-            {/* Background floating leaves decoration */}
-            <Leaf className="absolute top-40 left-[-2%] text-[#4ade80] opacity-20 w-56 h-56 rotate-12 z-0 pointer-events-none" strokeWidth={1} />
-            <Leaf className="absolute bottom-20 right-[5%] text-[#4ade80] opacity-15 w-48 h-48 -rotate-45 z-0 pointer-events-none" strokeWidth={1.5} />
-            <Leaf className="absolute top-1/4 right-[10%] text-[#4ade80] opacity-[0.08] w-72 h-72 rotate-90 z-0 pointer-events-none" strokeWidth={1} />
+        <section className="py-[120px] px-[8%] bg-gradient-to-br from-[#1b4332] to-[#081c15] text-white relative overflow-hidden" id="gallery">
+            <span className="text-[var(--color-primary-light)] font-[800] text-[0.9rem] uppercase tracking-[3px] block mb-[15px] text-center relative z-10">
+                Our Collection
+            </span>
+            <h2 className="text-[3.5rem] text-center mb-[60px] text-white relative z-10 font-[var(--font-serif)]">
+                Harvesting Excellence
+            </h2>
 
-            <div className="max-w-7xl mx-auto px-4 relative z-10">
-                <div className="text-center mb-16">
-                    <span className="text-sm font-bold text-[#E4B552] uppercase tracking-widest block mb-4">Our Store</span>
-                    <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#0F2016] mb-6">
-                        Most Popular Microgreens
-                    </h2>
-                    <div className="w-16 h-1 bg-[#2A8742] rounded-full mx-auto"></div>
+            {/* Microgreens Rain Effect Background */}
+            <div className="absolute inset-0 pointer-events-none z-[5] opacity-20 hidden md:block">
+                {[...Array(15)].map((_, i) => (
+                    <Leaf
+                        key={i}
+                        className={`absolute text-[var(--color-primary-vibrant)] animate-[leafRain_linear_infinite] opacity-60 drop-shadow-[0_0_5px_rgba(68,221,102,0.3)]`}
+                        size={30}
+                        style={{
+                            left: `${Math.random() * 100}vw`,
+                            animationDuration: `${10 + Math.random() * 15}s`,
+                            animationDelay: `${Math.random() * 5}s`,
+                        }}
+                    />
+                ))}
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-[minmax(250px,_350px)_minmax(250px,_350px)] gap-[25px] relative z-10">
+                {/* Dynamically integrating Store Categories as the first items, followed by other gallery items */}
+                {storeCategories.length > 0 && (
+                    <div className="relative rounded-[20px] overflow-hidden cursor-pointer md:col-span-2 md:row-span-2 group">
+                        <Link href={storeCategories[0].link}>
+                            <img src={storeCategories[0].image || "/i2.jpg"} alt={storeCategories[0].name} className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[rgba(27,67,50,0.85)] to-transparent flex flex-col justify-end p-[30px] opacity-0 transition-opacity duration-400 border-b-[5px] border-[var(--color-primary-vibrant)] group-hover:opacity-100">
+                                <h3 className="text-[1.8rem] font-[var(--font-serif)] font-[800] mb-2">{storeCategories[0].name}</h3>
+                                <p className="text-[1rem] font-[var(--font-sans)]">{storeCategories[0].description}</p>
+                            </div>
+                        </Link>
+                    </div>
+                )}
+
+                {storeCategories.length > 1 && (
+                    <div className="relative rounded-[20px] overflow-hidden cursor-pointer md:col-span-2 group">
+                        <Link href={storeCategories[1].link}>
+                            <img src={storeCategories[1].image || "/i3.jpg"} alt={storeCategories[1].name} className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[rgba(27,67,50,0.85)] to-transparent flex flex-col justify-end p-[30px] opacity-0 transition-opacity duration-400 border-b-[5px] border-[var(--color-primary-vibrant)] group-hover:opacity-100">
+                                <h3 className="text-[1.5rem] font-[var(--font-serif)] font-[800] mb-2">{storeCategories[1].name}</h3>
+                                <p className="text-[1rem] font-[var(--font-sans)]">{storeCategories[1].description}</p>
+                            </div>
+                        </Link>
+                    </div>
+                )}
+
+                <div className="relative rounded-[20px] overflow-hidden cursor-pointer md:col-span-1 group">
+                    <img src="/i4.jpg" alt="Chef Garnish" className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1592398633346-60868f0514da?auto=format&fit=crop&q=80&w=1200"; }} />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[rgba(27,67,50,0.85)] to-transparent flex flex-col justify-end p-[20px] opacity-0 transition-opacity duration-400 border-b-[5px] border-[var(--color-primary-vibrant)] group-hover:opacity-100">
+                        <h3 className="text-[1.2rem] font-[var(--font-serif)] font-[800] mb-1">Gourmet Garnish</h3>
+                        <p className="text-[0.9rem] font-[var(--font-sans)]">Elevate any dish.</p>
+                    </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 max-w-4xl mx-auto gap-8 md:gap-16">
-                    {productsData.slice(0, 2).map((product) => (
-                        <div key={product.id} className="group cursor-pointer">
-                            <div className="relative overflow-hidden rounded-[2rem] mb-4 aspect-[4/5] bg-[#F6F6F6] shadow-sm">
-                                <img
-                                    src={product.image}
-                                    alt={product.name}
-                                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 mix-blend-multiply"
-                                />
-                                <div className="absolute top-4 left-4 bg-white text-[0.7rem] font-bold px-4 py-1.5 rounded-full text-[#102B19] shadow-sm">
-                                    {product.category}
-                                </div>
-                            </div>
-                            <div className="flex justify-between items-start px-1 mt-5">
-                                <div className="flex flex-col">
-                                    <h3 className="font-serif font-bold text-[1.35rem] text-[#0F2016] mb-1 leading-tight group-hover:text-[#2A8742] transition-colors">
-                                        {product.name}
-                                    </h3>
-                                    <div className="flex items-center gap-1.5 mt-1 text-[#E4B552]">
-                                        <Star size={14} fill="currentColor" className="opacity-90" />
-                                        <span className="text-sm font-medium text-gray-500">{product.rating}</span>
-                                    </div>
-                                </div>
-                                <span className="font-bold text-lg text-[#144A29] pt-1">{product.price}</span>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
-                <div className="mt-16 text-center">
-                    <Link href="/products">
-                        <button className="bg-[#E4B552] hover:bg-[#c99f46] text-[#0F2016] font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-[#E4B552]/30">
-                            Explore More Products
-                        </button>
-                    </Link>
+                <div className="relative rounded-[20px] overflow-hidden cursor-pointer md:col-span-1 group">
+                    <img src="/i5.jpg" alt="Fresh Leaves" className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1606707335967-0c7f897621c4?auto=format&fit=crop&q=80&w=1200"; }} />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[rgba(27,67,50,0.85)] to-transparent flex flex-col justify-end p-[20px] opacity-0 transition-opacity duration-400 border-b-[5px] border-[var(--color-primary-vibrant)] group-hover:opacity-100">
+                        <h3 className="text-[1.2rem] font-[var(--font-serif)] font-[800] mb-1">Radish Greens</h3>
+                        <p className="text-[0.9rem] font-[var(--font-sans)]">Vibrant colors.</p>
+                    </div>
                 </div>
             </div>
+
+            <style dangerouslySetInnerHTML={{
+                __html: `
+                @keyframes leafRain {
+                    0% { transform: translateY(-10vh) translateX(0) rotate(0deg); opacity: 0; }
+                    10% { opacity: 0.6; }
+                    90% { opacity: 0.6; }
+                    100% { transform: translateY(110vh) translateX(100px) rotate(360deg); opacity: 0; }
+                }
+                `
+            }} />
         </section>
     );
 }
