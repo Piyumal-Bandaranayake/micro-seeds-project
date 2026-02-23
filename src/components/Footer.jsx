@@ -1,44 +1,58 @@
 import Link from "next/link";
-import { Facebook, Instagram, Twitter } from "lucide-react";
+import { Facebook, Instagram, Twitter, Leaf, MapPin, Phone, Mail } from "lucide-react";
 
 export default function Footer() {
     return (
-        <footer className="bg-[#08120a] text-white py-12 px-8">
-            <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center border-b border-white/10 pb-8">
-
-                {/* Brand */}
-                <div className="flex flex-col items-center md:items-start">
-                    <img src="/logo.png" alt="Botanic Logo" className="h-16 mb-4 object-contain brightness-0 invert" />
-                    <p className="text-gray-400 text-sm text-center md:text-left">
-                        Cultivating a healthier future generation with premium, highly-nutritive microgreens.
+        <footer id="contact" className="bg-grad-footer text-white pt-[100px] px-[8%] pb-[40px] border-t-[4px] border-transparent relative z-20" style={{ borderImage: "var(--grad-pure-green) 1" }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1.5fr] gap-[80px] mb-[80px]">
+                <div className="footer-brand">
+                    <Link href="/" className="text-[1.6rem] font-[800] text-white flex items-center gap-[12px] no-underline mb-[25px]">
+                        <Leaf className="text-[var(--color-secondary)] w-8 h-8 font-[900]" />
+                        <span>Microgreens Lanka</span>
+                    </Link>
+                    <p className="text-white/70 mb-[30px] font-[var(--font-sans)] leading-[1.7]">
+                        Revolutionizing agricultural supply in Sri Lanka through precision farming and a robust island-wide distribution network.
                     </p>
+                    <div className="flex gap-[15px]">
+                        <a href="#" className="text-white text-[1.2rem] hover:text-[var(--color-secondary)] transition-colors"><Instagram /></a>
+                        <a href="#" className="text-white text-[1.2rem] hover:text-[var(--color-secondary)] transition-colors"><Facebook /></a>
+                        <a href="#" className="text-white text-[1.2rem] hover:text-[var(--color-secondary)] transition-colors"><Twitter /></a>
+                    </div>
                 </div>
 
-                {/* Quick Links */}
-                <div className="flex justify-center gap-8 text-gray-300">
-                    <Link href="/" className="hover:text-[#E4B552] transition-colors">Home</Link>
-                    <Link href="/about" className="hover:text-[#E4B552] transition-colors">About</Link>
-                    <Link href="/products" className="hover:text-[#E4B552] transition-colors">Products</Link>
-                    <Link href="/contact" className="hover:text-[#E4B552] transition-colors">Contact</Link>
+                <div className="footer-links">
+                    <h4 className="text-[1.2rem] mb-[30px] text-[var(--color-secondary)] font-[var(--font-serif)] font-[800]">Explore</h4>
+                    <ul className="list-none space-y-[15px]">
+                        <li><Link href="#home" className="text-white/70 no-underline transition-colors hover:text-white">Home</Link></li>
+                        <li><Link href="#about" className="text-white/70 no-underline transition-colors hover:text-white">Philosophy</Link></li>
+                        <li><Link href="#supply" className="text-white/70 no-underline transition-colors hover:text-white">Distribution</Link></li>
+                        <li><Link href="#gallery" className="text-white/70 no-underline transition-colors hover:text-white">Collection</Link></li>
+                    </ul>
                 </div>
 
-                {/* Socials */}
-                <div className="flex justify-center md:justify-end gap-6">
-                    <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-[#E4B552] hover:text-[#0F2016] transition-all duration-300">
-                        <Facebook size={18} />
-                    </a>
-                    <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-[#E4B552] hover:text-[#0F2016] transition-all duration-300">
-                        <Instagram size={18} />
-                    </a>
-                    <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-[#E4B552] hover:text-[#0F2016] transition-all duration-300">
-                        <Twitter size={18} />
-                    </a>
+                <div className="footer-links">
+                    <h4 className="text-[1.2rem] mb-[30px] text-[var(--color-secondary)] font-[var(--font-serif)] font-[800]">Legal</h4>
+                    <ul className="list-none space-y-[15px]">
+                        <li><a href="#" className="text-white/70 no-underline transition-colors hover:text-white">Agriculture Cert</a></li>
+                        <li><a href="#" className="text-white/70 no-underline transition-colors hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" className="text-white/70 no-underline transition-colors hover:text-white">Quality Assurance</a></li>
+                        <li><a href="#" className="text-white/70 no-underline transition-colors hover:text-white">Partner Program</a></li>
+                    </ul>
+                </div>
+
+                <div className="footer-links">
+                    <h4 className="text-[1.2rem] mb-[30px] text-[var(--color-secondary)] font-[var(--font-serif)] font-[800]">Get In Touch</h4>
+                    <ul className="list-none space-y-[15px]">
+                        <li className="flex gap-[15px] text-white/70"><MapPin className="text-[var(--color-secondary)] mt-1 flex-shrink-0" /> Colombo, Sri Lanka</li>
+                        <li className="flex gap-[15px] text-white/70"><Phone className="text-[var(--color-secondary)] mt-1 flex-shrink-0" /> +94 11 234 5678</li>
+                        <li className="flex gap-[15px] text-white/70"><Mail className="text-[var(--color-secondary)] mt-1 flex-shrink-0" /> hello@microgreenslanka.lk</li>
+                    </ul>
                 </div>
             </div>
 
-            {/* Copyright */}
-            <div className="max-w-7xl mx-auto pt-6 text-center text-gray-500 text-sm">
-                &copy; {new Date().getFullYear()} Botanic Microgreens. All rights reserved.
+            <div className="pt-[40px] border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-white/50 text-[0.9rem] gap-4">
+                <p>&copy; {new Date().getFullYear()} Microgreens Lanka (Pvt) Ltd. All Rights Reserved.</p>
+                <p>Registration No: AG/MG/2024/001</p>
             </div>
         </footer>
     );
