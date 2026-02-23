@@ -1,27 +1,27 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Outfit, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
   subsets: ["latin"],
 });
 
 export const metadata = {
-  title: "Botanic Microgreens",
-  description: "Nourishing your body with premium microgreens.",
+  title: "Microgreens Lanka (Pvt) Ltd",
+  description: "Leading supplier for Food City, Supermarkets, and Luxury Hotels. Registered with the Dept of Agriculture Sri Lanka. Fresh, organic microgreens.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${outfit.variable} ${playfair.variable} antialiased`}
       >
         {children}
         <Footer />
