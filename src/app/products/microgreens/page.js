@@ -55,67 +55,6 @@ export default function MicrogreensPage() {
                 </div>
             </section>
 
-            {/* Gallery Section */}
-            <section className="pb-12 md:pb-24 px-[5%] md:px-[8%] relative">
-                <div className="max-w-[1400px] mx-auto">
-                    <div className="flex flex-col items-end text-right mb-12">
-                        <span className="text-[0.8rem] font-bold text-[var(--color-primary-vibrant)] uppercase tracking-[3px] mb-2">Visual Journey</span>
-                        <h2 className="text-[1.8rem] md:text-[2.8rem] font-[var(--font-serif)] font-black text-[var(--color-primary)] leading-tight">
-                            Fresh From <span className="text-grad-pure">Our Farm</span>
-                        </h2>
-                    </div>
-
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 auto-rows-[150px] md:auto-rows-[250px]">
-                        {/* m1 - Tall on Left */}
-                        <div className="col-span-1 row-span-2 md:row-span-3 relative group overflow-hidden rounded-[20px] md:rounded-[30px] shadow-lg">
-                            <img src="/m1.jpeg" alt="Farm Detail" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                            <div className="absolute inset-0 bg-grad-nav opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-                        </div>
-
-                        {/* m5 - Large Main Square-ish */}
-                        <div className="col-span-1 md:col-span-2 row-span-2 md:row-span-2 relative group overflow-hidden rounded-[20px] md:rounded-[30px] shadow-lg">
-                            <img src="/m5.jpeg" alt="Microgreens Growth" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                            <div className="absolute inset-0 bg-grad-nav opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-                        </div>
-
-                        {/* m2 - Small */}
-                        <div className="col-span-1 row-span-1 relative group overflow-hidden rounded-[20px] md:rounded-[30px] shadow-lg">
-                            <img src="/m2.jpeg" alt="Harvesting" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                            <div className="absolute inset-0 bg-grad-nav opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-                        </div>
-
-                        {/* m4 - Small */}
-                        <div className="col-span-1 row-span-1 relative group overflow-hidden rounded-[20px] md:rounded-[30px] shadow-lg">
-                            <img src="/m4.jpeg" alt="Fresh Greens" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                            <div className="absolute inset-0 bg-grad-nav opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-                        </div>
-
-                        {/* m6 - Wide on Right side bottom area */}
-                        <div className="col-span-2 md:col-span-2 row-span-1 relative group overflow-hidden rounded-[20px] md:rounded-[30px] shadow-lg">
-                            <img src="/m6.jpeg" alt="Farm View" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                            <div className="absolute inset-0 bg-grad-nav opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-                        </div>
-
-                        {/* m7 - Small */}
-                        <div className="col-span-1 row-span-1 relative group overflow-hidden rounded-[20px] md:rounded-[30px] shadow-lg">
-                            <img src="/m7.jpeg" alt="Organic Soil" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                            <div className="absolute inset-0 bg-grad-nav opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-                        </div>
-
-                        {/* m8 - Small */}
-                        <div className="col-span-1 row-span-1 relative group overflow-hidden rounded-[20px] md:rounded-[30px] shadow-lg">
-                            <img src="/m8.jpeg" alt="Sustainability" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                            <div className="absolute inset-0 bg-grad-nav opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-                        </div>
-
-                        {/* m9 - Tallish Small */}
-                        <div className="col-span-1 md:col-span-1 row-span-1 md:row-span-2 relative group overflow-hidden rounded-[20px] md:rounded-[30px] shadow-lg">
-                            <img src="/m9.jpeg" alt="Detailed Leaves" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                            <div className="absolute inset-0 bg-grad-nav opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
         </main>
     );
 }
