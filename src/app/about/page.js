@@ -78,35 +78,46 @@ export default function AboutPage() {
                         <span className="w-[10px] h-[10px] rounded-full bg-grad-pure"></span>
                         <span className="text-[0.9rem] font-bold text-[var(--color-primary)] uppercase tracking-[3px]">Leadership</span>
                     </div>
-                    <h2 className="text-[2.2rem] md:text-[3.5rem] lg:text-[4.5rem] font-[var(--font-serif)] font-black text-[var(--color-primary)] mb-[40px] md:mb-[80px] leading-tight">
+                    <h2 className="text-[2.2rem] md:text-[3.5rem] lg:text-[4.5rem] font-[var(--font-serif)] font-black text-[var(--color-primary)] mb-[15px] md:mb-[25px] leading-tight">
                         Meet Our <span className="text-grad-pure">Experts</span>
                     </h2>
+                    <p className="text-[1rem] md:text-[1.1rem] font-bold text-[var(--color-primary-vibrant)] mb-[40px] md:mb-[80px] tracking-[1px]">
+                        Micro Greens Lanka Pvt Limited
+                    </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-[40px] md:gap-[80px] max-w-[1100px] mx-auto">
 
-                        {/* CEO Card */}
+                        {/* CEO & Founder Card */}
                         <div className="group relative flex flex-col items-center">
                             <div className="relative w-[220px] h-[220px] md:w-[320px] md:h-[320px] mb-[25px] md:mb-[40px]">
                                 {/* Decorative Ring */}
                                 <div className="absolute -inset-[15px] rounded-full border-[2px] border-dashed border-[var(--color-primary-vibrant)]/20 animate-spin-slow group-hover:border-[var(--color-primary-vibrant)] transition-colors duration-700"></div>
                                 
+                                {/* Founder badge on photo */}
+                                <div className="absolute -top-2 left-1/2 -translate-x-1/2 z-10 flex items-center gap-[6px] bg-gradient-to-r from-yellow-400 to-yellow-500 text-[var(--color-primary)] px-[14px] py-[5px] rounded-full shadow-lg">
+                                    <span className="text-[0.7rem] font-black uppercase tracking-[2px]">⭐ Founder</span>
+                                </div>
+
                                 <div className="relative w-full h-full overflow-hidden rounded-full border-[10px] border-white shadow-[0_20px_50px_rgba(27,67,50,0.15)] group-hover:scale-[1.05] transition-all duration-700 ease-out">
                                     <img
-                                        src="/ceo.jpeg"
-                                        alt="CEO - K D Wijerathne"
+                                        src="/dom.jpeg"
+                                        alt="CEO & Founder - K D Wijerathne"
                                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                     />
                                     <div className="absolute inset-0 bg-grad-nav opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                                 </div>
                             </div>
                             
-                            <h3 className="text-[2rem] md:text-[2.2rem] font-[var(--font-serif)] font-black text-[var(--color-primary)] mb-2 tracking-tight">K D Wijerathne</h3>
-                            <div className="px-6 py-2 rounded-full bg-white shadow-md border border-[var(--color-primary-vibrant)]/10">
-                                <p className="text-[var(--color-primary-vibrant)] font-bold text-[0.85rem] uppercase tracking-[2px]">CEO</p>
+                            <h3 className="text-[2rem] md:text-[2.2rem] font-[var(--font-serif)] font-black text-[var(--color-primary)] mb-1 tracking-tight">K D Wijerathne</h3>
+                            <p className="text-[0.85rem] text-[var(--color-primary-light)] mb-3 font-medium">Micro Greens Lanka Pvt Limited</p>
+                            <div className="flex flex-col items-center gap-2">
+                                <div className="px-6 py-2 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 shadow-[0_4px_15px_rgba(234,179,8,0.4)]">
+                                    <p className="text-[var(--color-primary)] font-black text-[0.85rem] uppercase tracking-[2px]">Founder & CEO</p>
+                                </div>
                             </div>
                         </div>
 
-                        {/* Director of Marketing Card */}
+                        {/* Marketing Manager Card */}
                         <div className="group relative flex flex-col items-center">
                             <div className="relative w-[220px] h-[220px] md:w-[320px] md:h-[320px] mb-[25px] md:mb-[40px]">
                                 {/* Decorative Ring */}
@@ -114,17 +125,18 @@ export default function AboutPage() {
                                 
                                 <div className="relative w-full h-full overflow-hidden rounded-full border-[10px] border-white shadow-[0_20px_50px_rgba(27,67,50,0.15)] group-hover:scale-[1.05] transition-all duration-700 ease-out">
                                     <img
-                                        src="/dom.jpeg"
-                                        alt="Director Marketing - H M R N Kaldera"
+                                        src="/ceo.jpeg"
+                                        alt="Marketing Manager - H M R N Kaldera"
                                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                     />
                                     <div className="absolute inset-0 bg-grad-nav opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                                 </div>
                             </div>
 
-                            <h3 className="text-[2rem] md:text-[2.2rem] font-[var(--font-serif)] font-black text-[var(--color-primary)] mb-2 tracking-tight">H M R N Kaldera (Bsc)</h3>
+                            <h3 className="text-[2rem] md:text-[2.2rem] font-[var(--font-serif)] font-black text-[var(--color-primary)] mb-1 tracking-tight">H M R N Kaldera (Bsc)</h3>
+                            <p className="text-[0.85rem] text-[var(--color-primary-light)] mb-3 font-medium">Micro Greens Lanka Pvt Limited</p>
                             <div className="px-6 py-2 rounded-full bg-white shadow-md border border-[var(--color-primary-vibrant)]/10">
-                                <p className="text-[var(--color-primary-vibrant)] font-bold text-[0.85rem] uppercase tracking-[2px]">Director Marketing</p>
+                                <p className="text-[var(--color-primary-vibrant)] font-bold text-[0.85rem] uppercase tracking-[2px]">Marketing Manager</p>
                             </div>
                         </div>
 
