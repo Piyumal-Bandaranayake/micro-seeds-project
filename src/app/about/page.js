@@ -5,7 +5,7 @@ export default function AboutPage() {
         <main className="min-h-screen bg-[#F5F8F6] relative">
 
             {/* Header Section */}
-            <section className="relative pt-[180px] pb-[80px] px-[8%] text-white overflow-hidden border-b-[4px] border-transparent" style={{ borderImage: "var(--grad-pure-green) 1" }}>
+            <section className="relative pt-[120px] md:pt-[180px] pb-[50px] md:pb-[80px] px-[5%] md:px-[8%] text-white overflow-hidden border-b-[4px] border-transparent" style={{ borderImage: "var(--grad-pure-green) 1" }}>
                 {/* Background Image & Overlay */}
                 <div className="absolute inset-0 z-0">
                     <img src="/i2.jpg" alt="About Background" className="w-full h-full object-cover" />
@@ -14,7 +14,7 @@ export default function AboutPage() {
 
                 <Leaf className="absolute top-10 right-10 text-[var(--color-primary-vibrant)] opacity-10 w-96 h-96 rotate-45 z-10 pointer-events-none" strokeWidth={1} />
                 <div className="max-w-[1400px] mx-auto relative z-20 text-center">
-                    <h1 className="text-[4rem] md:text-[5rem] font-[var(--font-serif)] font-[800] mb-[20px] text-[var(--color-secondary)]">
+                    <h1 className="text-[2.5rem] md:text-[4rem] lg:text-[5rem] font-[var(--font-serif)] font-[800] mb-[20px] text-[var(--color-secondary)]">
                         About Us
                     </h1>
                     <p className="text-[1.2rem] text-white/80 max-w-[800px] mx-auto leading-[1.7] font-[var(--font-sans)]">
@@ -24,12 +24,12 @@ export default function AboutPage() {
             </section>
 
             {/* Vision and Mission Section */}
-            <section className="py-[120px] px-[8%] relative overflow-hidden bg-white">
+            <section className="py-[60px] md:py-[120px] px-[5%] md:px-[8%] relative overflow-hidden bg-white">
                 {/* Decorative Elements */}
                 <div className="absolute top-0 right-[-10%] w-[500px] h-[500px] bg-grad-pure opacity-[0.03] blur-[100px] rounded-full pointer-events-none"></div>
                 <div className="absolute bottom-0 left-[-10%] w-[500px] h-[500px] bg-[var(--color-secondary)] opacity-[0.03] blur-[100px] rounded-full pointer-events-none"></div>
 
-                <div className="max-w-[1400px] mx-auto grid md:grid-cols-2 gap-[50px] relative z-10">
+                <div className="max-w-[1400px] mx-auto grid md:grid-cols-2 gap-[30px] md:gap-[50px] relative z-10">
                     
                     {/* Vision Card */}
                     <div className="group relative p-[3px] rounded-[40px] transition-all duration-500 hover:-translate-y-[10px]" style={{ background: "var(--grad-pure-green)" }}>
@@ -72,21 +72,21 @@ export default function AboutPage() {
             </section>
 
             {/* Team Section */}
-            <section className="py-[120px] px-[8%] bg-[var(--color-light)] relative">
+            <section className="py-[60px] md:py-[120px] px-[5%] md:px-[8%] bg-[var(--color-light)] relative">
                 <div className="max-w-[1400px] mx-auto text-center">
                     <div className="inline-flex items-center gap-[15px] mb-[20px] px-[25px] py-[10px] rounded-full bg-white shadow-sm border border-[var(--color-primary-vibrant)]/10">
                         <span className="w-[10px] h-[10px] rounded-full bg-grad-pure"></span>
                         <span className="text-[0.9rem] font-bold text-[var(--color-primary)] uppercase tracking-[3px]">Leadership</span>
                     </div>
-                    <h2 className="text-[3.5rem] md:text-[4.5rem] font-[var(--font-serif)] font-black text-[var(--color-primary)] mb-[80px] leading-tight">
+                    <h2 className="text-[2.2rem] md:text-[3.5rem] lg:text-[4.5rem] font-[var(--font-serif)] font-black text-[var(--color-primary)] mb-[40px] md:mb-[80px] leading-tight">
                         Meet Our <span className="text-grad-pure">Experts</span>
                     </h2>
 
-                    <div className="grid md:grid-cols-2 gap-[80px] max-w-[1100px] mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-[40px] md:gap-[80px] max-w-[1100px] mx-auto">
 
                         {/* CEO Card */}
                         <div className="group relative flex flex-col items-center">
-                            <div className="relative w-[320px] h-[320px] mb-[40px]">
+                            <div className="relative w-[220px] h-[220px] md:w-[320px] md:h-[320px] mb-[25px] md:mb-[40px]">
                                 {/* Decorative Ring */}
                                 <div className="absolute -inset-[15px] rounded-full border-[2px] border-dashed border-[var(--color-primary-vibrant)]/20 animate-spin-slow group-hover:border-[var(--color-primary-vibrant)] transition-colors duration-700"></div>
                                 
@@ -108,7 +108,7 @@ export default function AboutPage() {
 
                         {/* Director of Marketing Card */}
                         <div className="group relative flex flex-col items-center">
-                            <div className="relative w-[320px] h-[320px] mb-[40px]">
+                            <div className="relative w-[220px] h-[220px] md:w-[320px] md:h-[320px] mb-[25px] md:mb-[40px]">
                                 {/* Decorative Ring */}
                                 <div className="absolute -inset-[15px] rounded-full border-[2px] border-dashed border-[var(--color-primary-vibrant)]/20 animate-spin-slow-reverse group-hover:border-[var(--color-primary-vibrant)] transition-colors duration-700"></div>
                                 

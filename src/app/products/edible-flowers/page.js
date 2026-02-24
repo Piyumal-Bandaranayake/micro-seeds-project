@@ -10,7 +10,7 @@ export default function EdibleFlowersPage() {
         <main className="min-h-screen bg-[var(--color-light)] relative">
             
             {/* Header Section */}
-            <section className="relative pt-[180px] pb-[80px] px-[8%] text-white overflow-hidden border-b-[4px] border-transparent" style={{ borderImage: "var(--grad-pure-green) 1" }}>
+            <section className="relative pt-[120px] md:pt-[180px] pb-[50px] md:pb-[80px] px-[5%] md:px-[8%] text-white overflow-hidden border-b-[4px] border-transparent" style={{ borderImage: "var(--grad-pure-green) 1" }}>
                 {/* Background Image & Overlay */}
                 <div className="absolute inset-0 z-0">
                     <img src="/viola.jpg" alt="Edible Flowers Background" className="w-full h-full object-cover" />
@@ -19,13 +19,13 @@ export default function EdibleFlowersPage() {
 
                 <Leaf className="absolute top-10 right-10 text-[var(--color-primary-vibrant)] opacity-10 w-96 h-96 rotate-45 z-10 pointer-events-none" strokeWidth={1} />
                 <div className="max-w-[1400px] mx-auto relative z-20 text-center">
-                    <h1 className="text-[4rem] md:text-[5rem] font-[var(--font-serif)] font-[800] text-[var(--color-secondary)]">
+                    <h1 className="text-[2.2rem] md:text-[4rem] lg:text-[5rem] font-[var(--font-serif)] font-[800] text-[var(--color-secondary)]">
                         {data.name}
                     </h1>
                 </div>
             </section>
 
-            <section className="py-24 px-[8%] relative">
+            <section className="py-12 md:py-24 px-[5%] md:px-[8%] relative">
                 {/* Decorative Elements */}
                 <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-grad-pure opacity-[0.03] blur-[100px] rounded-full pointer-events-none"></div>
 

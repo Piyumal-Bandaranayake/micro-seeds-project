@@ -10,7 +10,7 @@ export default function MicrogreensPage() {
         <main className="min-h-screen bg-[var(--color-light)] relative">
             
             {/* Header Section */}
-            <section className="relative pt-[180px] pb-[80px] px-[8%] text-white overflow-hidden border-b-[4px] border-transparent" style={{ borderImage: "var(--grad-pure-green) 1" }}>
+            <section className="relative pt-[120px] md:pt-[180px] pb-[50px] md:pb-[80px] px-[5%] md:px-[8%] text-white overflow-hidden border-b-[4px] border-transparent" style={{ borderImage: "var(--grad-pure-green) 1" }}>
                 {/* Background Image & Overlay */}
                 <div className="absolute inset-0 z-0">
                     <img src="/micro3.jpg" alt="Microgreens Background" className="w-full h-full object-cover" />
@@ -19,13 +19,13 @@ export default function MicrogreensPage() {
 
                 <Leaf className="absolute top-10 right-10 text-[var(--color-primary-vibrant)] opacity-10 w-96 h-96 rotate-45 z-10 pointer-events-none" strokeWidth={1} />
                 <div className="max-w-[1400px] mx-auto relative z-20 text-center">
-                    <h1 className="text-[4rem] md:text-[5rem] font-[var(--font-serif)] font-[800] text-[var(--color-secondary)]">
+                    <h1 className="text-[2.2rem] md:text-[4rem] lg:text-[5rem] font-[var(--font-serif)] font-[800] text-[var(--color-secondary)]">
                         {data.name}
                     </h1>
                 </div>
             </section>
 
-            <section className="py-24 px-[8%] relative">
+            <section className="py-12 md:py-24 px-[5%] md:px-[8%] relative">
                 {/* Decorative Elements */}
                 <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-grad-pure opacity-[0.03] blur-[100px] rounded-full pointer-events-none"></div>
 
@@ -56,16 +56,16 @@ export default function MicrogreensPage() {
             </section>
 
             {/* Gallery Section */}
-            <section className="pb-24 px-[8%] relative">
+            <section className="pb-12 md:pb-24 px-[5%] md:px-[8%] relative">
                 <div className="max-w-[1400px] mx-auto">
                     <div className="flex flex-col items-end text-right mb-12">
                         <span className="text-[0.8rem] font-bold text-[var(--color-primary-vibrant)] uppercase tracking-[3px] mb-2">Visual Journey</span>
-                        <h2 className="text-[2.2rem] md:text-[2.8rem] font-[var(--font-serif)] font-black text-[var(--color-primary)] leading-tight">
+                        <h2 className="text-[1.8rem] md:text-[2.8rem] font-[var(--font-serif)] font-black text-[var(--color-primary)] leading-tight">
                             Fresh From <span className="text-grad-pure">Our Farm</span>
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 auto-rows-[200px] md:auto-rows-[250px]">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 auto-rows-[150px] md:auto-rows-[250px]">
                         {/* m1 - Tall on Left */}
                         <div className="col-span-1 row-span-2 md:row-span-3 relative group overflow-hidden rounded-[20px] md:rounded-[30px] shadow-lg">
                             <img src="/m1.jpeg" alt="Farm Detail" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />

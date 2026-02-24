@@ -85,7 +85,7 @@ export default function Hero() {
                 </div>
 
                 {/* Title Transition - Increased Height to prevent overlap */}
-                <div className="relative mb-[40px] w-full min-h-[200px] md:min-h-[300px] lg:min-h-[350px] flex items-center justify-center">
+                <div className="relative mb-[30px] md:mb-[40px] w-full min-h-[180px] md:min-h-[300px] lg:min-h-[350px] flex items-center justify-center">
                     {slides.map((slide, idx) => (
                         <h1 
                             key={idx} 
@@ -101,13 +101,13 @@ export default function Hero() {
                 </div>
 
                 {/* Buttons Always Fixed */}
-                <div className="flex flex-col md:flex-row gap-[20px] justify-center w-full md:w-auto relative z-20 mt-4">
-                    <Link href="#supply" className="inline-flex items-center justify-center gap-[12px] px-[40px] py-[18px] rounded-full font-black uppercase tracking-[2px] text-[0.95rem] transition-all duration-500 bg-grad-pure text-white border-none shadow-[0_20px_40px_rgba(27,67,50,0.5)] hover:-translate-y-[8px] hover:shadow-[0_25px_50px_rgba(68,221,102,0.6)] pulse-anim">
+                <div className="flex flex-col sm:flex-row gap-[15px] md:gap-[20px] justify-center w-full sm:w-auto relative z-20 mt-4 px-4 sm:px-0">
+                    <a href="#supply" className="w-full sm:w-auto inline-flex items-center justify-center gap-[12px] px-[30px] md:px-[40px] py-[15px] md:py-[18px] rounded-full font-black uppercase tracking-[2px] text-[0.85rem] md:text-[0.95rem] transition-all duration-500 bg-grad-pure text-white border-none shadow-[0_20px_40px_rgba(27,67,50,0.5)] hover:-translate-y-[8px] hover:shadow-[0_25px_50px_rgba(68,221,102,0.6)] pulse-anim">
                         Our Supply Network
-                    </Link>
-                    <Link href="#contact" className="inline-flex items-center justify-center gap-[12px] px-[40px] py-[18px] rounded-full font-black uppercase tracking-[2px] text-[0.95rem] transition-all duration-500 bg-white/10 backdrop-blur-[10px] text-[var(--color-secondary)] border border-white/20 shadow-xl hover:bg-[var(--color-secondary)] hover:text-[var(--color-primary)] hover:-translate-y-[8px]">
+                    </a>
+                    <a href="/contact" className="w-full sm:w-auto inline-flex items-center justify-center gap-[12px] px-[30px] md:px-[40px] py-[15px] md:py-[18px] rounded-full font-black uppercase tracking-[2px] text-[0.85rem] md:text-[0.95rem] transition-all duration-500 bg-white/10 backdrop-blur-[10px] text-[var(--color-secondary)] border border-white/20 shadow-xl hover:bg-[var(--color-secondary)] hover:text-[var(--color-primary)] hover:-translate-y-[8px]">
                         Partner With Us
-                    </Link>
+                    </a>
                 </div>
 
             </div>
