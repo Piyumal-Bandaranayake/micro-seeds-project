@@ -94,9 +94,7 @@ export default function AboutPage() {
                                 <div className="absolute -inset-[15px] rounded-full border-[2px] border-dashed border-[var(--color-primary-vibrant)]/20 animate-spin-slow group-hover:border-[var(--color-primary-vibrant)] transition-colors duration-700"></div>
                                 
                                 {/* Founder badge on photo */}
-                                <div className="absolute -top-2 left-1/2 -translate-x-1/2 z-10 flex items-center gap-[6px] bg-gradient-to-r from-yellow-400 to-yellow-500 text-[var(--color-primary)] px-[14px] py-[5px] rounded-full shadow-lg">
-                                    <span className="text-[0.7rem] font-black uppercase tracking-[2px]"> Founder</span>
-                                </div>
+                              
 
                                 <div className="relative w-full h-full overflow-hidden rounded-full border-[10px] border-white shadow-[0_20px_50px_rgba(27,67,50,0.15)] group-hover:scale-[1.05] transition-all duration-700 ease-out">
                                     <img
