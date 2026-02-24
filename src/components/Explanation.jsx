@@ -76,7 +76,7 @@ export default function Explanation() {
                         ))}
                     </div>
 
-                    <Link href="#products" className="inline-flex items-center justify-center gap-[12px] px-[40px] py-[18px] rounded-full font-black uppercase tracking-[2px] text-[0.95rem] transition-all duration-500 bg-grad-pure text-white border-none shadow-[0_20px_40px_rgba(27,67,50,0.3)] hover:-translate-y-[8px] hover:shadow-[0_25px_50px_rgba(68,221,102,0.4)] group w-max mt-6">
+                    <Link href="/products" className="inline-flex items-center justify-center gap-[12px] px-[40px] py-[18px] rounded-full font-black uppercase tracking-[2px] text-[0.95rem] transition-all duration-500 bg-grad-pure text-white border-none shadow-[0_20px_40px_rgba(27,67,50,0.3)] hover:-translate-y-[8px] hover:shadow-[0_25px_50px_rgba(68,221,102,0.4)] group w-max mt-6">
                         Explore Product <ChevronRight size={20} className="transition-transform group-hover:translate-x-2" />
                     </Link>
                 </div>
