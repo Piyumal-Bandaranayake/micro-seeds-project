@@ -133,8 +133,8 @@ export default function AboutPage() {
 
                             <h3 className="text-[2rem] md:text-[2.2rem] font-[var(--font-serif)] font-black text-[var(--color-primary)] mb-1 tracking-tight">H M R N Kaldera (Bsc)</h3>
                             <p className="text-[0.85rem] text-[var(--color-primary-light)] mb-3 font-medium">Micro Greens Lanka Pvt Limited</p>
-                            <div className="px-6 py-2 rounded-full bg-white shadow-md border border-[var(--color-primary-vibrant)]/10">
-                                <p className="text-[var(--color-primary-vibrant)] font-bold text-[0.85rem] uppercase tracking-[2px]">Marketing Manager</p>
+                            <div className="px-6 py-2 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 shadow-[0_4px_15px_rgba(234,179,8,0.4)]">
+                                <p className="text-[var(--color-primary)] font-black text-[0.85rem] uppercase tracking-[2px]">Director of Marketing</p>
                             </div>
                         </div>
 
