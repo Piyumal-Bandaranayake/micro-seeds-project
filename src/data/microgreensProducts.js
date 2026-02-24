@@ -5,7 +5,7 @@ export const microgreensProducts = [
     },
     {
         name: "Natural Glow Lip Balm",
-        image: "/Lipbalm1.jpg"
+        image: "/lipbalm1.jpg"
     },
     {
         name: "Herb-Infused Hair Revitalizing Pack",
