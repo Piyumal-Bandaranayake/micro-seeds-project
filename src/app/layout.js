@@ -16,6 +16,10 @@ const playfair = Playfair_Display({
 export const metadata = {
   title: "Microgreens Lanka (Pvt) Ltd",
   description: "Leading supplier for Food City, Supermarkets, and Luxury Hotels. Registered with the Dept of Agriculture Sri Lanka. Fresh, organic microgreens.",
+  icons: {
+    icon: "/logogreen.svg",
+    apple: "/logogreen.svg",
+  },
 };
 
 export default function RootLayout({ children }) {
