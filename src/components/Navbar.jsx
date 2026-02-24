@@ -83,16 +83,16 @@ export default function Navbar() {
                             <Link href="/contact" className="text-white font-semibold text-[1.5rem] md:text-[1rem] transition-all relative py-1 hover:text-[var(--color-primary-vibrant)] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[var(--color-primary-vibrant)] after:transition-all hover:after:w-full">Contact</Link>
                         </li>
                         <li className="md:hidden mt-5">
-                            <Link href="tel:+94123456789" className="bg-grad-call text-[var(--color-primary)] px-[25px] py-[10px] rounded-full font-extrabold text-[0.9rem] uppercase tracking-[1px] shadow-[0_4px_15px_rgba(255,204,0,0.4)] transition-all hover:-translate-y-[2px] hover:scale-105 hover:shadow-[0_8px_30px_rgba(255,204,0,0.5)] hover:brightness-110">Call Now</Link>
+                            <a href="https://wa.me/94766177948" target="_blank" rel="noopener noreferrer" className="bg-grad-call text-[var(--color-primary)] px-[25px] py-[10px] rounded-full font-extrabold text-[0.9rem] uppercase tracking-[1px] shadow-[0_4px_15px_rgba(255,204,0,0.4)] transition-all hover:-translate-y-[2px] hover:scale-105 hover:shadow-[0_8px_30px_rgba(255,204,0,0.5)] hover:brightness-110">Call Now</a>
                         </li>
                     </ul>
                 </nav>
 
                 {/* Call Now Button Desktop */}
                 <div className="hidden md:block">
-                    <Link href="tel:+94123456789" className="bg-grad-call text-[var(--color-primary)] px-[25px] py-[10px] rounded-full font-extrabold text-[0.9rem] uppercase tracking-[1px] shadow-[0_4px_15px_rgba(255,204,0,0.4)] transition-all hover:-translate-y-[2px] hover:scale-105 hover:shadow-[0_8px_30px_rgba(255,204,0,0.5)] hover:brightness-110">
+                    <a href="https://wa.me/94766177948" target="_blank" rel="noopener noreferrer" className="bg-grad-call text-[var(--color-primary)] px-[25px] py-[10px] rounded-full font-extrabold text-[0.9rem] uppercase tracking-[1px] shadow-[0_4px_15px_rgba(255,204,0,0.4)] transition-all hover:-translate-y-[2px] hover:scale-105 hover:shadow-[0_8px_30px_rgba(255,204,0,0.5)] hover:brightness-110">
                         Call Now
-                    </Link>
+                    </a>
                 </div>
             </header>
         </>

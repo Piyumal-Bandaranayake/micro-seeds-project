@@ -9,14 +9,16 @@ export default function Benefits() {
                     Join the elite network of retailers and chefs who trust Microgreens Lanka for their premium green supply.
                 </p>
                 <div className="flex gap-[20px] justify-center flex-wrap">
-                    <Link
-                        href="tel:+94123456789"
+                    <a
+                        href="https://wa.me/94766177948"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="bg-grad-call text-[var(--color-primary)] px-[40px] py-[15px] rounded-full no-underline font-[800] text-[1.1rem] transition-all duration-400 ease-[cubic-bezier(0.165,0.84,0.44,1)] shadow-[0_10px_30px_rgba(255,204,0,0.3)] hover:scale-105 hover:shadow-[0_15px_40px_rgba(255,204,0,0.5)] pulse-anim"
                     >
                         Order Now
-                    </Link>
+                    </a>
                     <Link
-                        href="#contact"
+                        href="/contact"
                         className="bg-white/10 backdrop-blur-[10px] text-[var(--color-secondary)] border-2 border-[var(--color-secondary)] px-[40px] py-[15px] rounded-full no-underline font-[800] text-[1.1rem] transition-all duration-400 ease-[cubic-bezier(0.165,0.84,0.44,1)] shadow-[0_10px_25px_rgba(0,0,0,0.2)] hover:bg-[var(--color-secondary)] hover:text-[var(--color-primary)] hover:scale-105 hover:shadow-[0_15px_35px_rgba(255,204,0,0.4)]"
                     >
                         Contact Us

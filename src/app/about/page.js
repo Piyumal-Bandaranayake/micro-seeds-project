@@ -92,17 +92,17 @@ export default function AboutPage() {
                                 
                                 <div className="relative w-full h-full overflow-hidden rounded-full border-[10px] border-white shadow-[0_20px_50px_rgba(27,67,50,0.15)] group-hover:scale-[1.05] transition-all duration-700 ease-out">
                                     <img
-                                        src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop"
-                                        alt="CEO"
+                                        src="/ceo.jpeg"
+                                        alt="CEO - K D Wijerathne"
                                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                     />
                                     <div className="absolute inset-0 bg-grad-nav opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                                 </div>
                             </div>
                             
-                            <h3 className="text-[2.2rem] font-[var(--font-serif)] font-black text-[var(--color-primary)] mb-2 tracking-tight">John Doe</h3>
+                            <h3 className="text-[2rem] md:text-[2.2rem] font-[var(--font-serif)] font-black text-[var(--color-primary)] mb-2 tracking-tight">K D Wijerathne</h3>
                             <div className="px-6 py-2 rounded-full bg-white shadow-md border border-[var(--color-primary-vibrant)]/10">
-                                <p className="text-[var(--color-primary-vibrant)] font-bold text-[0.85rem] uppercase tracking-[2px]">Chief Executive Officer</p>
+                                <p className="text-[var(--color-primary-vibrant)] font-bold text-[0.85rem] uppercase tracking-[2px]">CEO</p>
                             </div>
                         </div>
 
@@ -114,17 +114,17 @@ export default function AboutPage() {
                                 
                                 <div className="relative w-full h-full overflow-hidden rounded-full border-[10px] border-white shadow-[0_20px_50px_rgba(27,67,50,0.15)] group-hover:scale-[1.05] transition-all duration-700 ease-out">
                                     <img
-                                        src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop"
-                                        alt="Director of Marketing"
+                                        src="/dom.jpeg"
+                                        alt="Director Marketing - H M R N Kaldera"
                                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                                     />
                                     <div className="absolute inset-0 bg-grad-nav opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                                 </div>
                             </div>
 
-                            <h3 className="text-[2.2rem] font-[var(--font-serif)] font-black text-[var(--color-primary)] mb-2 tracking-tight">Jane Smith</h3>
+                            <h3 className="text-[2rem] md:text-[2.2rem] font-[var(--font-serif)] font-black text-[var(--color-primary)] mb-2 tracking-tight">H M R N Kaldera (Bsc)</h3>
                             <div className="px-6 py-2 rounded-full bg-white shadow-md border border-[var(--color-primary-vibrant)]/10">
-                                <p className="text-[var(--color-primary-vibrant)] font-bold text-[0.85rem] uppercase tracking-[2px]">Director of Marketing</p>
+                                <p className="text-[var(--color-primary-vibrant)] font-bold text-[0.85rem] uppercase tracking-[2px]">Director Marketing</p>
                             </div>
                         </div>
 
