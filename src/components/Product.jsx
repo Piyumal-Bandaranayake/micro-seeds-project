@@ -56,7 +56,7 @@ export default function Product() {
                 )}
 
                 <div className="relative rounded-[20px] overflow-hidden cursor-pointer md:col-span-1 group">
-                    <img src="/i4.jpg" alt="Chef Garnish" className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1592398633346-60868f0514da?auto=format&fit=crop&q=80&w=1200"; }} />
+                    <img src="/i4.jpg" alt="Organic microgreens used as gourmet garnish by professional chefs" className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1592398633346-60868f0514da?auto=format&fit=crop&q=80&w=1200"; }} />
                     <div className="absolute inset-0 bg-gradient-to-t from-[rgba(27,67,50,0.85)] to-transparent flex flex-col justify-end p-[20px] opacity-0 transition-opacity duration-400 border-b-[5px] border-[var(--color-primary-vibrant)] group-hover:opacity-100">
                         <h3 className="text-[1.2rem] font-[var(--font-serif)] font-[800] mb-1">Gourmet Garnish</h3>
                         <p className="text-[0.9rem] font-[var(--font-sans)]">Elevate any dish.</p>
@@ -64,7 +64,7 @@ export default function Product() {
                 </div>
 
                 <div className="relative rounded-[20px] overflow-hidden cursor-pointer md:col-span-1 group">
-                    <img src="/i5.jpg" alt="Fresh Leaves" className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1606707335967-0c7f897621c4?auto=format&fit=crop&q=80&w=1200"; }} />
+                    <img src="/i5.jpg" alt="Vibrant and fresh organic radish microgreen leaves" className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" onError={(e) => { e.target.src = "https://images.unsplash.com/photo-1606707335967-0c7f897621c4?auto=format&fit=crop&q=80&w=1200"; }} />
                     <div className="absolute inset-0 bg-gradient-to-t from-[rgba(27,67,50,0.85)] to-transparent flex flex-col justify-end p-[20px] opacity-0 transition-opacity duration-400 border-b-[5px] border-[var(--color-primary-vibrant)] group-hover:opacity-100">
                         <h3 className="text-[1.2rem] font-[var(--font-serif)] font-[800] mb-1">Radish Greens</h3>
                         <p className="text-[0.9rem] font-[var(--font-sans)]">Vibrant colors.</p>

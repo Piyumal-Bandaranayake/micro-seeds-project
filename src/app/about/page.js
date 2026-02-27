@@ -1,5 +1,13 @@
 import { Leaf, Eye, Target, Users } from "lucide-react";
 
+export const metadata = {
+    title: "About Us | Our Vision & Mission",
+    description: "Learn about Microgreens Lanka (Pvt) Ltd, founded by K D Wijerathne. Dedicated to health and wellness through organic microgreens and vertical farming in Sri Lanka.",
+    alternates: {
+        canonical: "https://microgreenslanka.lk/about",
+    },
+};
+
 export default function AboutPage() {
     return (
         <main className="min-h-screen bg-[#F5F8F6] relative">
@@ -8,7 +16,7 @@ export default function AboutPage() {
             <section className="relative pt-[120px] md:pt-[180px] pb-[50px] md:pb-[80px] px-[5%] md:px-[8%] text-white overflow-hidden border-b-[4px] border-transparent" style={{ borderImage: "var(--grad-pure-green) 1" }}>
                 {/* Background Image & Overlay */}
                 <div className="absolute inset-0 z-0">
-                    <img src="/i2.jpg" alt="About Background" className="w-full h-full object-cover" />
+                    <img src="/i2.jpg" alt="Organic microgreens farm background - Microgreens Lanka" className="w-full h-full object-cover" />
                     <div className="absolute inset-0 bg-grad-nav opacity-90"></div>
                 </div>
 
@@ -30,7 +38,7 @@ export default function AboutPage() {
                 <div className="absolute bottom-0 left-[-10%] w-[500px] h-[500px] bg-[var(--color-secondary)] opacity-[0.03] blur-[100px] rounded-full pointer-events-none"></div>
 
                 <div className="max-w-[1400px] mx-auto grid md:grid-cols-2 gap-[30px] md:gap-[50px] relative z-10">
-                    
+
                     {/* Vision Card */}
                     <div className="group relative p-[3px] rounded-[40px] transition-all duration-500 hover:-translate-y-[10px]" style={{ background: "var(--grad-pure-green)" }}>
                         <div className="h-full bg-white rounded-[38px] p-[60px] flex flex-col items-start gap-[30px] shadow-[0_20px_60px_rgba(27,67,50,0.05)]">
@@ -92,9 +100,9 @@ export default function AboutPage() {
                             <div className="relative w-[220px] h-[220px] md:w-[320px] md:h-[320px] mb-[25px] md:mb-[40px]">
                                 {/* Decorative Ring */}
                                 <div className="absolute -inset-[15px] rounded-full border-[2px] border-dashed border-[var(--color-primary-vibrant)]/20 animate-spin-slow group-hover:border-[var(--color-primary-vibrant)] transition-colors duration-700"></div>
-                                
+
                                 {/* Founder badge on photo */}
-                              
+
 
                                 <div className="relative w-full h-full overflow-hidden rounded-full border-[10px] border-white shadow-[0_20px_50px_rgba(27,67,50,0.15)] group-hover:scale-[1.05] transition-all duration-700 ease-out">
                                     <img
@@ -105,7 +113,7 @@ export default function AboutPage() {
                                     <div className="absolute inset-0 bg-grad-nav opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                                 </div>
                             </div>
-                            
+
                             <h3 className="text-[2rem] md:text-[2.2rem] font-[var(--font-serif)] font-black text-[var(--color-primary)] mb-1 tracking-tight">K D Wijerathne</h3>
                             <p className="text-[0.85rem] text-[var(--color-primary-light)] mb-3 font-medium">Micro Greens Lanka Pvt Limited</p>
                             <div className="flex flex-col items-center gap-2">
@@ -120,7 +128,7 @@ export default function AboutPage() {
                             <div className="relative w-[220px] h-[220px] md:w-[320px] md:h-[320px] mb-[25px] md:mb-[40px]">
                                 {/* Decorative Ring */}
                                 <div className="absolute -inset-[15px] rounded-full border-[2px] border-dashed border-[var(--color-primary-vibrant)]/20 animate-spin-slow-reverse group-hover:border-[var(--color-primary-vibrant)] transition-colors duration-700"></div>
-                                
+
                                 <div className="relative w-full h-full overflow-hidden rounded-full border-[10px] border-white shadow-[0_20px_50px_rgba(27,67,50,0.15)] group-hover:scale-[1.05] transition-all duration-700 ease-out">
                                     <img
                                         src="/ceo.jpeg"

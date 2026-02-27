@@ -1,6 +1,14 @@
 import Contact from "@/components/Contact";
 import { Leaf } from "lucide-react";
 
+export const metadata = {
+    title: "Contact Us | Bulk Supply & Partnerships",
+    description: "Get in touch with Microgreens Lanka (Pvt) Ltd. We provide bulk supplies of organic microgreens to hotels and supermarkets in Sri Lanka.",
+    alternates: {
+        canonical: "https://microgreenslanka.lk/contact",
+    },
+};
+
 export default function ContactPage() {
     return (
         <main className="min-h-screen bg-[var(--color-light)] relative">

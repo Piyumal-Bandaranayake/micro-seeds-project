@@ -5,9 +5,9 @@ import { Leaf, HeartPulse, ShoppingCart, Sparkles, ChevronRight } from "lucide-r
 
 export default function Explanation() {
     const images = [
-        "/micro1.jpg",
-        "/i2.jpg",
-        "/i5.jpg",
+        { src: "/micro1.jpg", alt: "Freshly harvested organic microgreens in Sri Lanka" },
+        { src: "/i2.jpg", alt: "Premium organic microgreens ready for supermarket distribution" },
+        { src: "/i5.jpg", alt: "Vibrant and nutrient-dense microgreen leaves" },
     ];
 
     const [currentImage, setCurrentImage] = useState(0);
@@ -49,7 +49,7 @@ export default function Explanation() {
     return (
         <section className="py-[100px] px-[8%] bg-white relative overflow-hidden" id="explanation">
             <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-[80px] items-center">
-                
+
                 {/* Left Side: Content */}
                 <div className="space-y-8 order-2 lg:order-1">
                     <div className="space-y-4">
@@ -91,25 +91,23 @@ export default function Explanation() {
                         {images.map((img, idx) => (
                             <img
                                 key={idx}
-                                src={img}
-                                alt={`Microgreens ${idx}`}
-                                className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out ${
-                                    idx === currentImage ? "opacity-100 scale-100" : "opacity-0 scale-110 pointer-events-none"
-                                }`}
+                                src={img.src}
+                                alt={img.alt}
+                                className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out ${idx === currentImage ? "opacity-100 scale-100" : "opacity-0 scale-110 pointer-events-none"
+                                    }`}
                             />
                         ))}
-                        
+
                         {/* Overlay Gradient */}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
 
                         {/* Image Counter Overlay */}
                         <div className="absolute bottom-10 left-10 flex gap-2">
                             {images.map((_, idx) => (
-                                <div 
+                                <div
                                     key={idx}
-                                    className={`h-1.5 transition-all duration-500 rounded-full ${
-                                        idx === currentImage ? "w-8 bg-[var(--color-primary-vibrant)]" : "w-2 bg-white/50"
-                                    }`}
+                                    className={`h-1.5 transition-all duration-500 rounded-full ${idx === currentImage ? "w-8 bg-[var(--color-primary-vibrant)]" : "w-2 bg-white/50"
+                                        }`}
                                 />
                             ))}
                         </div>

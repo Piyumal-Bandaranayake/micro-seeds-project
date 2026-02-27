@@ -3,15 +3,47 @@ import { storeCategories } from "@/data/storeData";
 import { Leaf, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
+export const metadata = {
+    title: "Our Collections | Organic Microgreens & Edible Flowers",
+    description: "Explore our premium range of organic microgreens and edible flowers. Nutrient-dense, fresh, and perfect for health-conscious individuals and gourmet dining.",
+    alternates: {
+        canonical: "https://microgreenslanka.lk/products",
+    },
+};
+
 export default function ProductsPage() {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": storeCategories.map((category, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "item": {
+                "@type": "Product",
+                "name": category.name,
+                "description": category.description,
+                "image": `https://microgreenslanka.lk${category.image}`,
+                "offers": {
+                    "@type": "Offer",
+                    "availability": "https://schema.org/InStock",
+                    "priceCurrency": "LKR"
+                }
+            }
+        }))
+    };
+
     return (
         <main className="min-h-screen bg-[var(--color-light)] relative">
-            
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+
             {/* Header Section */}
             <section className="relative pt-[180px] pb-[80px] px-[8%] text-white overflow-hidden border-b-[4px] border-transparent" style={{ borderImage: "var(--grad-pure-green) 1" }}>
                 {/* Background Image & Overlay */}
                 <div className="absolute inset-0 z-0">
-                    <img src="/i3.jpg" alt="Products Background" className="w-full h-full object-cover" />
+                    <img src="/i3.jpg" alt="Premium organic microgreens collection - Microgreens Lanka" className="w-full h-full object-cover" />
                     <div className="absolute inset-0 bg-grad-nav opacity-90"></div>
                 </div>
 
@@ -34,7 +66,7 @@ export default function ProductsPage() {
                             <div className="relative w-full aspect-[4/3] bg-[#F6F6F6] overflow-hidden">
                                 <img
                                     src={category.image}
-                                    alt={category.name}
+                                    alt={`Organic ${category.name} - Premium healthy greens Sri Lanka`}
                                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 mix-blend-multiply"
                                 />
                                 <div className="absolute top-4 left-4 bg-[#E4B552] text-[0.75rem] font-bold px-4 py-1.5 rounded-full text-[#0F2016] shadow-md uppercase tracking-wide">
@@ -85,49 +117,49 @@ export default function ProductsPage() {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 auto-rows-[150px] md:auto-rows-[250px]">
                         {/* m1 - Tall on Left */}
                         <div className="col-span-1 row-span-2 md:row-span-3 relative group overflow-hidden rounded-[20px] md:rounded-[30px] shadow-lg">
-                            <img src="/m1.jpeg" alt="Farm Detail" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                            <img src="/m1.jpeg" alt="Close-up of organic microgreens growth at our Sri Lanka farm" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                             <div className="absolute inset-0 bg-grad-nav opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                         </div>
 
                         {/* m5 - Large Main Square-ish */}
                         <div className="col-span-1 md:col-span-2 row-span-2 md:row-span-2 relative group overflow-hidden rounded-[20px] md:rounded-[30px] shadow-lg">
-                            <img src="/m5.jpeg" alt="Microgreens Growth" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                            <img src="/m5.jpeg" alt="Trays of healthy organic microgreens in a controlled environment" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                             <div className="absolute inset-0 bg-grad-nav opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                         </div>
 
                         {/* m2 - Small */}
                         <div className="col-span-1 row-span-1 relative group overflow-hidden rounded-[20px] md:rounded-[30px] shadow-lg">
-                            <img src="/m2.jpeg" alt="Harvesting" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                            <img src="/m2.jpeg" alt="Harvesting fresh organic microgreens for delivery" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                             <div className="absolute inset-0 bg-grad-nav opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                         </div>
 
                         {/* m4 - Small */}
                         <div className="col-span-1 row-span-1 relative group overflow-hidden rounded-[20px] md:rounded-[30px] shadow-lg">
-                            <img src="/m4.jpeg" alt="Fresh Greens" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                            <img src="/m4.jpeg" alt="Bowl of fresh nutrient-dense microgreens ready for consumption" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                             <div className="absolute inset-0 bg-grad-nav opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                         </div>
 
                         {/* m6 - Wide */}
                         <div className="col-span-2 md:col-span-2 row-span-1 relative group overflow-hidden rounded-[20px] md:rounded-[30px] shadow-lg">
-                            <img src="/m6.jpeg" alt="Farm View" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                            <img src="/m6.jpeg" alt="Overview of our sustainable vertical farming facility in Sri Lanka" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                             <div className="absolute inset-0 bg-grad-nav opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                         </div>
 
                         {/* m7 - Small */}
                         <div className="col-span-1 row-span-1 relative group overflow-hidden rounded-[20px] md:rounded-[30px] shadow-lg">
-                            <img src="/m7.jpeg" alt="Organic Soil" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                            <img src="/m7.jpeg" alt="Organic soil and seeds used for growing premium microgreens" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                             <div className="absolute inset-0 bg-grad-nav opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                         </div>
 
                         {/* m8 - Small */}
                         <div className="col-span-1 row-span-1 relative group overflow-hidden rounded-[20px] md:rounded-[30px] shadow-lg">
-                            <img src="/m8.jpeg" alt="Sustainability" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                            <img src="/m8.jpeg" alt="Sustainable agricultural practices at Microgreens Lanka" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                             <div className="absolute inset-0 bg-grad-nav opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                         </div>
 
                         {/* m9 - Tallish */}
                         <div className="col-span-1 md:col-span-1 row-span-1 md:row-span-2 relative group overflow-hidden rounded-[20px] md:rounded-[30px] shadow-lg">
-                            <img src="/m9.jpeg" alt="Detailed Leaves" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                            <img src="/m9.jpeg" alt="Detailed view of healthy microgreen leaves showing vibrant colors" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                             <div className="absolute inset-0 bg-grad-nav opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                         </div>
                     </div>
