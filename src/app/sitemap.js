@@ -21,6 +21,18 @@ export default function sitemap() {
             priority: 0.9,
         },
         {
+            url: `${baseUrl}/products/microgreens`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.85,
+        },
+        {
+            url: `${baseUrl}/products/edible-flowers`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.85,
+        },
+        {
             url: `${baseUrl}/contact`,
             lastModified: new Date(),
             changeFrequency: 'monthly',

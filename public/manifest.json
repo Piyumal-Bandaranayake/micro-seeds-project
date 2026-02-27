@@ -1,0 +1,22 @@
+{
+    "name": "Microgreens Lanka",
+    "short_name": "Microgreens",
+    "description": "Premium Organic Microgreens & Edible Flowers Sri Lanka",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#081c15",
+    "theme_color": "#2d6a4f",
+    "icons": [
+        {
+            "src": "/logogreen.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        },
+        {
+            "src": "/logogreen.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
