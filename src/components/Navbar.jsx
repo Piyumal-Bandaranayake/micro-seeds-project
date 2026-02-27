@@ -53,14 +53,6 @@ export default function Navbar() {
                     <span className="text-grad-pure hidden sm:block tracking-tighter">Microgreens Lanka</span>
                 </Link>
 
-                {/* Mobile Toggle */}
-                <div
-                    className="md:hidden text-white text-[1.8rem] cursor-pointer"
-                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                >
-                    {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-                </div>
-
                 {/* Nav Links */}
                 <nav>
                     <ul className={`fixed md:relative top-0 ${isMobileMenuOpen ? "right-0" : "right-[-100%]"} md:right-0 w-[75%] md:w-auto h-screen md:h-auto bg-grad-nav md:!bg-none md:bg-transparent flex flex-col md:flex-row justify-start md:justify-end pt-[80px] md:pt-0 pl-[8%] md:pl-0 gap-6 md:gap-10 items-start md:items-center transition-all duration-500 ease-in-out z-[1001] md:z-auto shadow-[-10px_0_30px_rgba(0,0,0,0.3)] md:shadow-none list-none m-0 p-0 md:items-center`}
@@ -97,6 +89,15 @@ export default function Navbar() {
                         </li>
                     </ul>
                 </nav>
+
+                {/* Mobile Toggle */}
+                <div
+                    className="md:hidden text-white text-[1.8rem] cursor-pointer"
+                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                >
+                    {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+                </div>
+
 
                 {/* Call Now Button Desktop */}
                 <div className="hidden md:block">
