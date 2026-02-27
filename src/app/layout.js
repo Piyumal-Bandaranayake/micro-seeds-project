@@ -32,15 +32,11 @@ export const metadata = {
   icons: {
     icon: [
       { url: "/logogreen.svg", type: "image/svg+xml" },
-      { url: "/favicon.ico" },
+      { url: "/logogreen.png", type: "image/png" },
     ],
-    shortcut: "/logogreen.svg",
-    apple: "/logogreen.svg",
-    other: [
-      {
-        rel: "apple-touch-icon-precomposed",
-        url: "/logogreen.svg",
-      },
+    shortcut: "/logogreen.png",
+    apple: [
+      { url: "/logogreen.png", sizes: "180x180", type: "image/png" },
     ],
   },
   openGraph: {
