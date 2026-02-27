@@ -59,7 +59,7 @@ export default function Navbar() {
                         style={{ paddingLeft: undefined }}>
                         {/* Mobile Menu Close Button Inside */}
                         {isMobileMenuOpen && (
-                            <li className="md:hidden absolute top-[20px] right-[20px] cursor-pointer" onClick={() => setIsMobileMenuOpen(false)}>
+                            <li className="md:hidden absolute top-[20px] right-[20px] cursor-pointer" onClick={() => setIsMobileMenuOpen(false)} aria-label="Close menu">
                                 <X size={32} className="text-white" />
                             </li>
                         )}
@@ -94,6 +94,8 @@ export default function Navbar() {
                 <div
                     className="md:hidden text-white text-[1.8rem] cursor-pointer"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+                    role="button"
                 >
                     {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
                 </div>
