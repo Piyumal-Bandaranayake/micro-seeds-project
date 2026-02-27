@@ -30,8 +30,18 @@ export const metadata = {
     telephone: false,
   },
   icons: {
-    icon: "/logogreen.svg",
+    icon: [
+      { url: "/logogreen.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico" },
+    ],
+    shortcut: "/logogreen.svg",
     apple: "/logogreen.svg",
+    other: [
+      {
+        rel: "apple-touch-icon-precomposed",
+        url: "/logogreen.svg",
+      },
+    ],
   },
   openGraph: {
     type: "website",
@@ -55,6 +65,7 @@ export const metadata = {
     description: "Leading supplier of organic microgreens and edible flowers in Sri Lanka. Fresh, nutrient-dense superfoods delivered island-wide.",
     images: ["/og-image.jpg"],
   },
+  manifest: "/manifest.json",
   robots: {
     index: true,
     follow: true,
