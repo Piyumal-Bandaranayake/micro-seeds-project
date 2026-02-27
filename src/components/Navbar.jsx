@@ -48,9 +48,10 @@ export default function Navbar() {
                     }`}
             >
                 {/* Logo */}
-                <Link href="/" className="text-[1.4rem] md:text-[1.6rem] font-bold flex items-center gap-3 no-underline">
+                <Link href="/" className="text-[1.4rem] md:text-[1.6rem] font-bold flex items-center gap-2 sm:gap-3 no-underline">
                     <img src="/logogreen.png" alt="Microgreens Lanka Logo" className="h-10 md:h-12 w-auto object-contain" />
-                    <span className="text-grad-pure hidden sm:block tracking-tighter">Microgreens Lanka</span>
+                    <span className="text-grad-pure hidden sm:block tracking-tighter">MicroGreens Lanka</span>
+                    <span className="text-grad-pure sm:hidden block tracking-tighter text-[1.50rem] font-semibold leading-tight text-center">MicroGreens Lanka (PVT) LTD</span>
                 </Link>
 
                 {/* Nav Links */}
@@ -68,7 +69,7 @@ export default function Navbar() {
                             <li className="md:hidden mb-4 pl-[8%] pt-[10px]">
                                 <Link href="/" className="flex items-center gap-2 no-underline" onClick={() => setIsMobileMenuOpen(false)}>
                                     <img src="/logogreen.png" alt="Logo" className="h-9 w-auto" />
-                                    <span className="text-grad-pure font-bold text-[1.1rem] tracking-tighter">Microgreens Lanka</span>
+                                    <span className="text-grad-pure font-semibold text-[1.1rem] tracking-tighter text-center">Microgreens Lanka (PVT) LTD</span>
                                 </Link>
                             </li>
                         )}
