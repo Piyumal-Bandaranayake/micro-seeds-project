@@ -1,11 +1,12 @@
 import { Leaf, Eye, Target, Users } from "lucide-react";
 
 export const metadata = {
-    title: "About Us | Our Vision & Mission",
-    description: "Learn about Microgreens Lanka (Pvt) Ltd, founded by K D Wijerathne. Dedicated to health and wellness through organic microgreens and vertical farming in Sri Lanka.",
+    title: "About Microgreens Lanka | Pioneer in Organic Vertical Farming",
+    description: "Discover the story of Microgreens Lanka (Pvt) Ltd. Founded by K D Wijerathne, we are Sri Lanka's leading experts in high-nutrient organic microgreens and sustainable agriculture.",
     alternates: {
         canonical: "https://microgreenslanka.lk/about",
     },
+    keywords: "microgreens lanka about, organic farming sri lanka, vertical farming pioneer sri lanka, healthy living sri lanka",
 };
 
 export default function AboutPage() {

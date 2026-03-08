@@ -7,11 +7,12 @@ import About from "@/components/About";
 import Benefits from "@/components/Benefits";
 
 export const metadata = {
-    title: "Premium Organic Microgreens & Edible Flowers Sri Lanka",
-    description: "Microgreens Lanka (Pvt) Ltd provides fresh, organic microgreens with up to 40x more vitamins. Island-wide distribution to supermarkets and luxury hotels in Sri Lanka.",
+    title: "Microgreens Sri Lanka | #1 Organic Microgreens & Edible Flowers",
+    description: "Welcome to Microgreens Lanka, the leading supplier of 100% organic microgreens in Sri Lanka. Certified by the Dept of Agriculture. Freshly grown and delivered island-wide to supermarkets, hotels, and homes.",
     alternates: {
         canonical: "https://microgreenslanka.lk",
     },
+    keywords: "microgreens sri lanka, buy microgreens sri lanka, microgreens price sri lanka, organic microgreens colombo, sunflower microgreens colombo, edible flowers sri lanka, vertical farming sri lanka",
 };
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
         "@id": "https://microgreenslanka.lk",
         "url": "https://microgreenslanka.lk",
         "telephone": "+94766177948",
+        "priceRange": "$$",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Colombo",
@@ -47,9 +49,14 @@ export default function Home() {
                 "Saturday",
                 "Sunday"
             ],
-            "opens": "00:00",
-            "closes": "23:59"
-        }
+            "opens": "08:00",
+            "closes": "20:00"
+        },
+        "sameAs": [
+            "https://facebook.com/microgreenslanka",
+            "https://instagram.com/microgreenslanka",
+            "https://linkedin.com/company/microgreenslanka"
+        ]
     };
 
     return (

@@ -14,7 +14,7 @@ export default function About() {
                     Why Microgreens Lanka?
                 </span>
                 <h2 className="text-[3.5rem] text-center mb-[60px] text-[var(--color-primary)] font-[var(--font-serif)]">
-                    Experience the Green Difference
+                    Microgreens Sri Lanka: The Green Difference
                 </h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[50px] mt-[60px] [transform-style:preserve-3d]">
@@ -22,7 +22,7 @@ export default function About() {
                         <Gem className="w-[4rem] h-[4rem] text-white mb-[35px] inline-block drop-shadow-[0_5px_15px_rgba(0,0,0,0.2)] transition-transform duration-500 group-hover:scale-125 group-hover:rotate-12" />
                         <h3 className="text-[1.8rem] mb-[20px] text-white font-[800] font-[var(--font-serif)]">High Quality</h3>
                         <p className="text-[1.1rem] text-white/90 leading-[1.6] font-[400] font-[var(--font-sans)]">
-                            Grown in lab-controlled environments to ensure the most premium, nutrient-dense harvest in the market.
+                            The #1 Microgreens Sri Lanka producer. Grown in lab-controlled environments to ensure the most premium, nutrient-dense harvest.
                         </p>
                     </div>
 

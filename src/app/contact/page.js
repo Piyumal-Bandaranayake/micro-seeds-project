@@ -2,11 +2,12 @@ import Contact from "@/components/Contact";
 import { Leaf } from "lucide-react";
 
 export const metadata = {
-    title: "Contact Us | Bulk Supply & Partnerships",
-    description: "Get in touch with Microgreens Lanka (Pvt) Ltd. We provide bulk supplies of organic microgreens to hotels and supermarkets in Sri Lanka.",
+    title: "Partner With Us | Bulk Microgreens Supply Sri Lanka",
+    description: "Inquire about wholesale microgreens supply for hotels, restaurants, and supermarkets in Sri Lanka. Contact Microgreens Lanka for bulk orders and partnerships.",
     alternates: {
         canonical: "https://microgreenslanka.lk/contact",
     },
+    keywords: "wholesale microgreens sri lanka, bulk organic microgreens colombo, hotel supply sri lanka, restaurant supplier colombo",
 };
 
 export default function ContactPage() {

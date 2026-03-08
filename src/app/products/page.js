@@ -4,11 +4,12 @@ import { Leaf, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export const metadata = {
-    title: "Our Collections | Organic Microgreens & Edible Flowers",
-    description: "Explore our premium range of organic microgreens and edible flowers. Nutrient-dense, fresh, and perfect for health-conscious individuals and gourmet dining.",
+    title: "Organic Microgreens & Edible Flowers Collection | Colombo Sri Lanka",
+    description: "Browse our premium range of organic microgreens (Sunflower, Broccoli, Radish, Pea Shoots) and edible flowers. Nutrient-dense, fresh harvest available for home delivery and wholesale in Sri Lanka.",
     alternates: {
         canonical: "https://microgreenslanka.lk/products",
     },
+    keywords: "sunflower microgreens sri lanka, broccoli microgreens colombo, radish microgreens, pea shoots sri lanka, edible flowers colombo, buy organic microgreens sri lanka",
 };
 
 export default function ProductsPage() {

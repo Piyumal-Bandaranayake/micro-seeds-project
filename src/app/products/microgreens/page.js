@@ -3,6 +3,15 @@ import { storeCategories } from "@/data/storeData";
 import { microgreensProducts } from "@/data/microgreensProducts";
 import { Leaf } from "lucide-react";
 
+export const metadata = {
+    title: "Fresh Organic Microgreens | Buy Sunflower, Broccoli & Radish",
+    description: "Explore our collection of fresh, organic microgreens including Sunflower, Broccoli, Radish, and more. 100% natural, nutrient-dense superfoods grown in Sri Lanka.",
+    alternates: {
+        canonical: "https://microgreenslanka.lk/products/microgreens",
+    },
+    keywords: "buy sunflower microgreens sri lanka, organic broccoli microgreens, fresh radish microgreens colombo, healthy superfoods delivery",
+};
+
 export default function MicrogreensPage() {
     const data = storeCategories.find(c => c.id === "microgreens");
 

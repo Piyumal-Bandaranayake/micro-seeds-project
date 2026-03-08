@@ -4,9 +4,9 @@ export default function Benefits() {
     return (
         <section className="py-[100px] px-[8%] bg-grad-nav text-center text-white relative overflow-hidden flex justify-center items-center">
             <div className="relative z-10">
-                <h2 className="text-[3.5rem] mb-[20px] font-[var(--font-serif)] font-[800]">Ready to Elevate Your Menu?</h2>
+                <h2 className="text-[3.5rem] mb-[20px] font-[var(--font-serif)] font-[800]">The Best Microgreens Sri Lanka</h2>
                 <p className="text-[1.2rem] mb-[40px] opacity-90 max-w-[600px] mx-auto font-[var(--font-sans)] leading-[1.7]">
-                    Join the elite network of retailers and chefs who trust Microgreens Lanka for their premium green supply.
+                    Join the top retailers in Colombo and chefs who trust Microgreens Lanka for the most premium organic supply in the nation.
                 </p>
                 <div className="flex gap-[20px] justify-center flex-wrap">
                     <a

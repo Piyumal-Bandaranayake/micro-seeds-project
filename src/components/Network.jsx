@@ -5,20 +5,20 @@ import { ShoppingBasket, Store, Hotel } from "lucide-react";
 export default function Network() {
     const cards = [
         {
-            title: "Food City Chain",
-            description: "Dominating the retail landscape as the primary microgreens provider for the island's largest food house chains.",
+            title: "Cargills Food City Supply",
+            description: "Sri Lanka's primary microgreens provider for the island's largest supermarket chain, ensuring top-tier agricultural standards.",
             icon: <ShoppingBasket size={32} className="text-white" />,
             image: "/food.jpg",
         },
         {
-            title: "Supermarket Network",
-            description: "Exclusive supplier for premium supermarket outlets, ensuring daily freshness for health-conscious shoppers island-wide.",
+            title: "Keells & Arpico Network",
+            description: "Premium supplier for Keells and Arpico Supercentres, delivering daily fresh organic harvests to health-conscious shoppers island-wide.",
             icon: <Store size={32} className="text-white" />,
             image: "/super.jpg",
         },
         {
-            title: "Hotels & Restaurants",
-            description: "The trusted partner for 5-star hotels and luxury restaurants, delivering the \"Gold Standard\" in culinary garnish.",
+            title: "Luxury Hotels & Dining",
+            description: "The trusted partner for 5-star hotels (Hilton, Shangri-La, Cinnamon) and luxury restaurants in Colombo and beyond.",
             icon: <Hotel size={32} className="text-white" />,
             image: "/resturent.jpg",
         }

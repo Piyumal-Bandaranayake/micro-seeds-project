@@ -11,7 +11,7 @@ export default function Footer() {
                         <span>Microgreens Lanka</span>
                     </Link>
                     <p className="text-white/70 mb-[15px] font-[var(--font-sans)] leading-[1.6] text-[0.9rem]">
-                        Revolutionizing agricultural supply in Sri Lanka through precision farming and a robust island-wide distribution network.
+                        Microgreens Lanka is the premier <strong>Microgreens Sri Lanka</strong> supplier, leading agricultural innovation and fresh organic delivery in Colombo and island-wide.
                     </p>
                 </div>
 

@@ -7,24 +7,24 @@ export default function Hero() {
     const slides = [
         {
             image: "/micro3.jpg",
-            badge: "Dept of Agriculture Registered",
+            badge: "Dept of Agriculture Licensed",
             icon: <Award size={18} />,
-            title: "The #1 Leading Microgreens Supplier",
-            highlight: "Microgreens"
+            title: "Microgreens Sri Lanka #1 Premium Supplier",
+            highlight: "Sri Lanka"
         },
         {
             image: "/i1.jpg",
             badge: "Government Recognized",
             icon: <ShieldCheck size={18} />,
-            title: "Sri Lanka Registered Company",
-            highlight: "Registered"
+            title: "Premium Organic Microgreens Colombo",
+            highlight: "Colombo"
         },
         {
             image: "/i3.jpg",
             badge: "100% Organic & Fresh",
             icon: <Leaf size={18} />,
-            title: "Premium Products",
-            highlight: "Premium"
+            title: "Healthy Superfood Delivery Sri Lanka",
+            highlight: "Superfood"
         }
     ];
 

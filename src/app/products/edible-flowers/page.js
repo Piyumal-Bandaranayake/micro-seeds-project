@@ -3,6 +3,15 @@ import { storeCategories } from "@/data/storeData";
 import { flowerProducts } from "@/data/flowerData";
 import { Leaf } from "lucide-react";
 
+export const metadata = {
+    title: "Vibrant Organic Edible Flowers | Gourmet Garnish Sri Lanka",
+    description: "Discover our premium selection of organic edible flowers for culinary masterpieces. Perfect for fine dining, cocktails, and cake decoration in Sri Lanka.",
+    alternates: {
+        canonical: "https://microgreenslanka.lk/products/edible-flowers",
+    },
+    keywords: "buy edible flowers sri lanka, gourmet garnish colombo, culiner flowers for cakes, organic viola edible flowers",
+};
+
 export default function EdibleFlowersPage() {
     const data = storeCategories.find(c => c.id === "edible-flowers");
 

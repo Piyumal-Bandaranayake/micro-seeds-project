@@ -57,10 +57,10 @@ export default function Explanation() {
                             Nature's Finest Superfood
                         </span>
                         <h2 className="text-[3rem] md:text-[3.5rem] font-[var(--font-serif)] font-black leading-[1.1] text-[var(--color-primary)]">
-                            Small in Size, <span className="text-grad-pure">Giant in Impact</span>
+                            Microgreens Sri Lanka <span className="text-grad-pure">Giant in Impact</span>
                         </h2>
                         <p className="text-[1.1rem] text-gray-600 leading-relaxed font-medium max-w-[600px]">
-                            Discover the secret of gourmet chefs and nutritionists worldwide. Our microgreens are grown in controlled environments to ensure peak potency.
+                            Discover the secret of gourmet chefs and nutritionists. As the leading source for <strong>Microgreens Sri Lanka</strong>, we grow in controlled environments for delivery in Colombo and island-wide.
                         </p>
                     </div>
 
