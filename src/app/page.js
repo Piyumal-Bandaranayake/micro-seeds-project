@@ -4,6 +4,7 @@ import Explanation from "@/components/Explanation";
 import Network from "@/components/Network";
 import Product from "@/components/Product";
 import About from "@/components/About";
+import Reviews from "@/components/Reviews";
 import Benefits from "@/components/Benefits";
 
 export const metadata = {
@@ -71,6 +72,7 @@ export default function Home() {
             <Network />
             <Product />
             <About />
+            <Reviews />
             <Benefits />
         </main>
     );
