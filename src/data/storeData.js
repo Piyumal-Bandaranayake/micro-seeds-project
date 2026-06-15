@@ -1,8 +1,8 @@
 export const storeCategories = [
     {
         id: "microgreens",
-        name: "Microgreen Powder",
-        description: "Packed with intense flavors and dense nutrition, our freshly harvested organic microgreens are perfect for salads, smoothies, and exquisite garnishes. They contain up to 40x more vitamins than their mature counterparts.",
+        name: "Micro Greens Dehydrated Powder",
+        description: "Microgreens dehydrated powders are basically concentrated microgreens - removing water keeps the nutrients dense and makes them easy to use daily. For cancer patients, the benefits come from the high levels of phytochemicals, antioxidants, and vitamins that stay active even after dehydration.",
         image: "/powder.jpg",
         link: "/products/microgreens",
         features: ["Highly Nutritious", "Boosts Immunity", "Improves Digestion"]
