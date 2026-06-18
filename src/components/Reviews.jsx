@@ -58,6 +58,10 @@ export default function Reviews() {
     const [dbReviews, setDbReviews] = useState([]);
 
     const fetchReviews = async () => {
+        if (!supabase) {
+            console.warn("Supabase is not initialized. Using static reviews.");
+            return;
+        }
         try {
             const { data, error } = await supabase
                 .from("reviews")
@@ -76,6 +80,7 @@ export default function Reviews() {
     };
 
     useEffect(() => {
+        if (!supabase) return;
         fetchReviews();
 
         // Listen for locally added reviews to trigger immediate updates

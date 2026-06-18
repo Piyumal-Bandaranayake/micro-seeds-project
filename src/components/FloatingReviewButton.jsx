@@ -21,6 +21,11 @@ export default function FloatingReviewButton() {
             return;
         }
 
+        if (!supabase) {
+            setErrorMsg("Supabase connection is not initialized. Please configure NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY in your hosting environment.");
+            return;
+        }
+
         setIsSubmitting(true);
         setErrorMsg("");
 
