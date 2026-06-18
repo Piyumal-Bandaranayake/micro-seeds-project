@@ -2,6 +2,7 @@ import { Outfit, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import FloatingReviewButton from "@/components/FloatingReviewButton";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -144,6 +145,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Footer />
+        <FloatingReviewButton />
       </body>
     </html>
   );

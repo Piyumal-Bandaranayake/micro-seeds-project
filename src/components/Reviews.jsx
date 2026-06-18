@@ -1,9 +1,10 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Star, Quote } from "lucide-react";
+import { supabase } from "@/data/supabaseClient";
 
 export default function Reviews() {
-    const reviews = [
+    const staticReviews = [
         {
             name: "Chef Dilhan Senanayake",
             role: "Executive Chef",
@@ -54,8 +55,61 @@ export default function Reviews() {
         }
     ];
 
+    const [dbReviews, setDbReviews] = useState([]);
+
+    const fetchReviews = async () => {
+        try {
+            const { data, error } = await supabase
+                .from("reviews")
+                .select("*")
+                .eq("approved", true)
+                .order("created_at", { ascending: false });
+
+            if (error) {
+                console.error("Error fetching reviews from Supabase:", error.message);
+            } else if (data) {
+                setDbReviews(data);
+            }
+        } catch (err) {
+            console.error("Failed to query reviews:", err);
+        }
+    };
+
+    useEffect(() => {
+        fetchReviews();
+
+        // Listen for locally added reviews to trigger immediate updates
+        const handleReviewAdded = () => {
+            fetchReviews();
+        };
+
+        window.addEventListener("review-added", handleReviewAdded);
+        return () => {
+            window.removeEventListener("review-added", handleReviewAdded);
+        };
+    }, []);
+
+    // Helper to get initials
+    const getInitials = (review) => {
+        if (review.imageInitials) return review.imageInitials;
+        if (review.image_initials) return review.image_initials;
+        if (review.name) {
+            return review.name
+                .split(" ")
+                .filter(Boolean)
+                .map((n) => n[0])
+                .join("")
+                .slice(0, 2)
+                .toUpperCase();
+        }
+        return "U";
+    };
+
+    // Combine static and dynamic reviews (dynamic/latest reviews first)
+    const combinedReviews = [...dbReviews, ...staticReviews];
+
     // Duplicate list for infinite marquee slide show effect
-    const marqueeReviews = [...reviews, ...reviews];
+    const marqueeReviews = [...combinedReviews, ...combinedReviews];
 
     return (
         <section className="py-[100px] bg-[var(--color-light)] overflow-hidden relative border-t border-[var(--color-primary-light)]/10">
@@ -85,7 +139,7 @@ export default function Reviews() {
                 <div className="flex gap-[30px] w-max animate-slide-show hover:[animation-play-state:paused] cursor-pointer">
                     {marqueeReviews.map((review, index) => (
                         <div
-                            key={index}
+                            key={`${review.id || 'static'}-${index}`}
                             className="w-[380px] md:w-[450px] bg-white/80 backdrop-blur-[10px] rounded-[30px] p-[35px] border border-white/60 shadow-[0_15px_35px_rgba(27,67,50,0.06)] flex flex-col justify-between transition-all duration-500 ease-[cubic-bezier(0.165,0.84,0.44,1)] hover:-translate-y-[8px] hover:scale-[1.02] hover:shadow-[0_25px_50px_rgba(27,67,50,0.12)] hover:border-[var(--color-primary-vibrant)]/30 group"
                         >
                             <div>
@@ -111,14 +165,14 @@ export default function Reviews() {
                             {/* Client Info */}
                             <div className="flex items-center gap-[15px] border-t border-[var(--color-primary-light)]/5 pt-[20px]">
                                 <div className="w-[50px] h-[50px] rounded-full bg-grad-pure text-white flex items-center justify-center font-[800] text-[1.1rem] shadow-[0_8px_16px_rgba(68,221,102,0.2)]">
-                                    {review.imageInitials}
+                                    {getInitials(review)}
                                 </div>
                                 <div>
                                     <h4 className="text-[1.15rem] font-bold text-[var(--color-primary)] font-[var(--font-sans)] leading-tight">
                                         {review.name}
                                     </h4>
                                     <p className="text-[0.9rem] text-[var(--color-primary-light)] font-semibold font-[var(--font-sans)]">
-                                        {review.role}, <span className="opacity-80 font-[500]">{review.company}</span>
+                                        {review.role || "Customer"}{review.company ? `, ${review.company}` : ""}
                                     </p>
                                 </div>
                             </div>
