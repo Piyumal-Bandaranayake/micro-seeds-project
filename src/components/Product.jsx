@@ -44,12 +44,24 @@ export default function Product() {
                 )}
 
                 {storeCategories.length > 1 && (
-                    <div className="relative rounded-[20px] overflow-hidden cursor-pointer md:col-span-2 group">
+                    <div className="relative rounded-[20px] overflow-hidden cursor-pointer md:col-span-1 group">
                         <Link href={storeCategories[1].link}>
                             <img src={storeCategories[1].image || "/i3.jpg"} alt={storeCategories[1].name} className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-[rgba(27,67,50,0.85)] to-transparent flex flex-col justify-end p-[30px] opacity-0 transition-opacity duration-400 border-b-[5px] border-[var(--color-primary-vibrant)] group-hover:opacity-100">
-                                <h3 className="text-[1.5rem] font-[var(--font-serif)] font-[800] mb-2">{storeCategories[1].name}</h3>
-                                <p className="text-[1rem] font-[var(--font-sans)]">{storeCategories[1].description}</p>
+                            <div className="absolute inset-0 bg-gradient-to-t from-[rgba(27,67,50,0.85)] to-transparent flex flex-col justify-end p-[20px] opacity-0 transition-opacity duration-400 border-b-[5px] border-[var(--color-primary-vibrant)] group-hover:opacity-100">
+                                <h3 className="text-[1.3rem] font-[var(--font-serif)] font-[800] mb-2 leading-tight">{storeCategories[1].name}</h3>
+                                <p className="text-[0.9rem] font-[var(--font-sans)] leading-snug">{storeCategories[1].description.slice(0, 100)}...</p>
+                            </div>
+                        </Link>
+                    </div>
+                )}
+
+                {storeCategories.length > 2 && (
+                    <div className="relative rounded-[20px] overflow-hidden cursor-pointer md:col-span-1 group">
+                        <Link href={storeCategories[2].link}>
+                            <img src={storeCategories[2].image || "/i3.jpg"} alt={storeCategories[2].name} className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[rgba(27,67,50,0.85)] to-transparent flex flex-col justify-end p-[20px] opacity-0 transition-opacity duration-400 border-b-[5px] border-[var(--color-primary-vibrant)] group-hover:opacity-100">
+                                <h3 className="text-[1.3rem] font-[var(--font-serif)] font-[800] mb-2 leading-tight">{storeCategories[2].name}</h3>
+                                <p className="text-[0.9rem] font-[var(--font-sans)] leading-snug">{storeCategories[2].description.slice(0, 100)}...</p>
                             </div>
                         </Link>
                     </div>

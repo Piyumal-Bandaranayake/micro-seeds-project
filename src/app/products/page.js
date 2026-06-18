@@ -61,7 +61,7 @@ export default function ProductsPage() {
 
             <div className="max-w-7xl mx-auto px-4 relative z-10 py-24">
 
-                <div className="grid grid-cols-1 md:grid-cols-2 max-w-5xl mx-auto gap-12 md:gap-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto gap-12 md:gap-16">
                     {storeCategories.map((category) => (
                         <div key={category.id} className="group bg-white rounded-[2rem] shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-300 flex flex-col h-full">
                             <div className="relative w-full aspect-[4/3] bg-[#F6F6F6] overflow-hidden">

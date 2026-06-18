@@ -18,5 +18,9 @@ export const flowerProducts = [
     {
         name: "White Floral Elegance",
         image: "/whit.png"
+    },
+    {
+        name: "Edible Flower Mix",
+        image: "/edi.jpeg"
     }
 ];
