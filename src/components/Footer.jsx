@@ -36,7 +36,7 @@ export default function Footer() {
             </div>
 
             <div className="pt-[20px] border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-white/50 text-[0.8rem] gap-2">
-                <p>&copy; {new Date().getFullYear()} Microgreens Lanka (Pvt) Ltd. All Rights Reserved.</p>
+                <p>&copy; {new Date().getFullYear()} Fusion Wave Systems (Pvt) Ltd. All Rights Reserved | +94 726 530 500 | +94 718 530 500</p>
                 <p>Registration No: AG/MG/2024/001</p>
             </div>
         </footer>

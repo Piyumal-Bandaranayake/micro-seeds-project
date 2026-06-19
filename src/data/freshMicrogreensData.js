@@ -22,5 +22,9 @@ export const freshMicrogreensProducts = [
     {
         name: "Premium Wheatgrass",
         image: "/f7.jpeg"
+    },
+    {
+        name: "Microgreens Mix",
+        image: "/f8.jpeg"
     }
 ];
