@@ -13,7 +13,7 @@ export default function Benefits() {
                         href="https://wa.me/94766177948"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-grad-call text-[var(--color-primary)] px-[40px] py-[15px] rounded-full no-underline font-[800] text-[1.1rem] transition-all duration-400 ease-[cubic-bezier(0.165,0.84,0.44,1)] shadow-[0_10px_30px_rgba(255,204,0,0.3)] hover:scale-105 hover:shadow-[0_15px_40px_rgba(255,204,0,0.5)] pulse-anim"
+                        className="bg-gradient-to-r from-[#44dd66] to-[#25d366] text-[#081c15] px-[40px] py-[15px] rounded-full no-underline font-[800] text-[1.1rem] transition-all duration-400 ease-[cubic-bezier(0.165,0.84,0.44,1)] shadow-[0_10px_30px_rgba(37,211,102,0.5)] hover:scale-105 hover:shadow-[0_15px_40px_rgba(37,211,102,0.7)] pulse-anim"
                     >
                         Order Now
                     </a>

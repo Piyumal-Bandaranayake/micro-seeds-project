@@ -86,7 +86,7 @@ export default function Navbar() {
                             <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="text-white font-semibold text-[1.3rem] md:text-[1rem] transition-all relative py-1 hover:text-[var(--color-primary-vibrant)] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-[var(--color-primary-vibrant)] after:transition-all hover:after:w-full block">Contact</Link>
                         </li>
                         <li className="md:hidden mt-4 pl-[8%]">
-                            <a href="https://wa.me/94766177948" target="_blank" rel="noopener noreferrer" className="bg-grad-call text-[var(--color-primary)] px-[25px] py-[10px] rounded-full font-extrabold text-[0.9rem] uppercase tracking-[1px] shadow-[0_4px_15px_rgba(255,204,0,0.4)] transition-all hover:-translate-y-[2px] hover:scale-105 hover:shadow-[0_8px_30px_rgba(255,204,0,0.5)] hover:brightness-110 inline-block">Call Now</a>
+                            <a href="https://wa.me/94766177948" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-[#44dd66] to-[#25d366] text-[#081c15] px-[25px] py-[10px] rounded-full font-extrabold text-[0.9rem] uppercase tracking-[1px] shadow-[0_4px_20px_rgba(37,211,102,0.6)] transition-all hover:-translate-y-[2px] hover:scale-105 hover:shadow-[0_8px_30px_rgba(37,211,102,0.8)] hover:brightness-110 inline-block">Order Now</a>
                         </li>
                     </ul>
                 </nav>
@@ -102,10 +102,10 @@ export default function Navbar() {
                 </div>
 
 
-                {/* Call Now Button Desktop */}
+                {/* Order Now Button Desktop */}
                 <div className="hidden md:block">
-                    <a href="https://wa.me/94766177948" target="_blank" rel="noopener noreferrer" className="bg-grad-call text-[var(--color-primary)] px-[25px] py-[10px] rounded-full font-extrabold text-[0.9rem] uppercase tracking-[1px] shadow-[0_4px_15px_rgba(255,204,0,0.4)] transition-all hover:-translate-y-[2px] hover:scale-105 hover:shadow-[0_8px_30px_rgba(255,204,0,0.5)] hover:brightness-110">
-                        Call Now
+                    <a href="https://wa.me/94766177948" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-[#44dd66] to-[#25d366] text-[#081c15] px-[25px] py-[10px] rounded-full font-extrabold text-[0.9rem] uppercase tracking-[1px] shadow-[0_4px_20px_rgba(37,211,102,0.6)] transition-all hover:-translate-y-[2px] hover:scale-105 hover:shadow-[0_8px_30px_rgba(37,211,102,0.8)] hover:brightness-110">
+                        Order Now
                     </a>
                 </div>
             </header>
