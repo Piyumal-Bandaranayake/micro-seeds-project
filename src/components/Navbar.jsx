@@ -42,17 +42,42 @@ export default function Navbar() {
             ></div>
 
             <header
-                className={`fixed left-1/2 -translate-x-1/2 z-[1000] flex justify-between items-center transition-all duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] ${isScrolled
-                    ? "top-5 w-[92%] md:w-[85%] px-[5%] py-[12px] bg-[#081c15]/95 backdrop-blur-xl rounded-[40px] border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
-                    : "top-0 w-full px-[5%] md:px-[8%] py-[20px] bg-transparent rounded-none border-none"
+                className={`fixed left-1/2 -translate-x-1/2 z-[1000] flex flex-col md:flex-row justify-between items-center transition-all duration-500 ease-[cubic-bezier(0.19,1,0.22,1)] ${isScrolled
+                    ? "top-3 md:top-5 w-[94%] md:w-[85%] px-[4%] md:px-[5%] py-[10px] md:py-[12px] bg-[#081c15]/95 backdrop-blur-xl rounded-[30px] md:rounded-[40px] border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+                    : "top-0 w-full px-[4%] md:px-[8%] py-[15px] md:py-[20px] bg-transparent rounded-none border-none"
                     }`}
             >
-                {/* Logo */}
-                <Link href="/" className="text-[1.4rem] md:text-[1.6rem] font-bold flex items-center gap-2 sm:gap-3 no-underline">
-                    <img src="/logogreen.png" alt="Microgreens Sri Lanka - Leading Organic Supplier" className="h-10 md:h-12 w-auto object-contain" />
-                    <span className="text-grad-pure hidden sm:block tracking-tighter">MicroGreens Lanka</span>
-                    <span className="text-grad-pure sm:hidden block tracking-tighter text-[1.50rem] font-semibold leading-tight text-center">MicroGreens Lanka (PVT) LTD</span>
-                </Link>
+                {/* Mobile Top Bar / Logo Container */}
+                <div className="w-full md:w-auto flex justify-between items-center">
+                    {/* Logo */}
+                    <Link href="/" className="text-[1.4rem] md:text-[1.6rem] font-bold flex items-center gap-2 sm:gap-3 no-underline">
+                        <img src="/logogreen.png" alt="Microgreens Sri Lanka - Leading Organic Supplier" className="h-9 md:h-12 w-auto object-contain" />
+                        <span className="text-grad-pure hidden sm:block tracking-tighter">MicroGreens Lanka</span>
+                        <span className="text-grad-pure sm:hidden block tracking-tighter text-[1.25rem] xs:text-[1.40rem] font-semibold leading-tight text-center">MicroGreens Lanka (PVT) LTD</span>
+                    </Link>
+
+                    {/* Mobile Toggle */}
+                    <div
+                        className="md:hidden text-white text-[1.8rem] cursor-pointer ml-2"
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+                        role="button"
+                    >
+                        {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+                    </div>
+                </div>
+
+                {/* Mobile Order Now Button - Highlighted Location */}
+                <div className="md:hidden w-full flex justify-center mt-3.5 mb-1.5">
+                    <a
+                        href="https://wa.me/94766177948"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-gradient-to-r from-[#44dd66] to-[#25d366] text-[#081c15] px-[20px] py-[5px] rounded-full font-black text-[0.78rem] uppercase tracking-[1.2px] shadow-[0_4px_15px_rgba(37,211,102,0.5)] transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-2 w-auto max-w-[190px]"
+                    >
+                        Order Now
+                    </a>
+                </div>
 
                 {/* Nav Links */}
                 <nav>
@@ -90,17 +115,6 @@ export default function Navbar() {
                         </li>
                     </ul>
                 </nav>
-
-                {/* Mobile Toggle */}
-                <div
-                    className="md:hidden text-white text-[1.8rem] cursor-pointer"
-                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                    aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-                    role="button"
-                >
-                    {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-                </div>
-
 
                 {/* Order Now Button Desktop */}
                 <div className="hidden md:block">
